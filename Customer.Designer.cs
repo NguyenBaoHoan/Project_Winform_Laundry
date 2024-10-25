@@ -65,12 +65,12 @@
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSearch.IconLeft")));
-            this.txtSearch.Location = new System.Drawing.Point(674, 12);
+            this.txtSearch.Location = new System.Drawing.Point(683, 12);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PlaceholderText = "Tìm kiếm";
+            this.txtSearch.PlaceholderText = "Search Id, Name, Phone, Address";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(270, 38);
+            this.txtSearch.Size = new System.Drawing.Size(249, 38);
             this.txtSearch.TabIndex = 1;
             // 
             // btnAdd

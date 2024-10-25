@@ -83,6 +83,7 @@
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click_1);
             // 
             // btnUpdate
             // 
@@ -100,6 +101,7 @@
             this.btnUpdate.Text = "Cập Nhật ";
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // btnSave
             // 
@@ -149,10 +151,11 @@
             // 
             // cbType
             // 
+            this.cbType.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbType.FormattingEnabled = true;
             this.cbType.Location = new System.Drawing.Point(157, 259);
             this.cbType.Name = "cbType";
-            this.cbType.Size = new System.Drawing.Size(544, 28);
+            this.cbType.Size = new System.Drawing.Size(544, 27);
             this.cbType.TabIndex = 74;
             // 
             // label8

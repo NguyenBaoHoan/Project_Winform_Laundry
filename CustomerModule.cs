@@ -65,44 +65,9 @@ namespace Project1_Laundry
             }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                checkField();
-                if (check)
-                {
-                    if (MessageBox.Show("Bạn có chắc chắn muốn chỉnh sửa thông tin khách hàng này?", "Chỉnh sửa thông tin khách hàng", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        cm = new SqlCommand("UPDATE tbCustomer SET vid = @vid, name = @name, phone = @phone, no = @no, model = @model, address = @address, points = @points WHERE id = @id", dbcon.connect());
-                        cm.Parameters.AddWithValue("@id", lblCid.Text); // ID khách hàng
-                        cm.Parameters.AddWithValue("@vid", cbType.SelectedValue); // Lưu id của loại thiết bị
-                        cm.Parameters.AddWithValue("@name", txtName.Text);
-                        cm.Parameters.AddWithValue("@phone", txtPhone.Text);
-                        cm.Parameters.AddWithValue("@no", txtNo.Text); // Mã thiết bị
-                        cm.Parameters.AddWithValue("@model", txtModel.Text); // Model thiết bị
-                        cm.Parameters.AddWithValue("@address", txtAddress.Text);
-                        cm.Parameters.AddWithValue("@points", udPoints.Value); // Sử dụng Value thay vì Text cho điểm số
+        
 
-                        dbcon.open(); // Mở kết nối
-                        cm.ExecuteNonQuery();
-                        dbcon.close(); // Đóng kết nối
-                        MessageBox.Show("Khách hàng đã được chỉnh sửa thành công!", title);
-                        this.Dispose();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, title);
-            }
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            Clear();
-        }
-
+       
         // Tải khi form bắt đầu
         private void CustomerModule_Load(object sender, EventArgs e)
         {
@@ -155,5 +120,43 @@ namespace Project1_Laundry
             check = true;
         }
         #endregion method
+
+        private void btnUpdate_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                checkField();
+                if (check)
+                {
+                    if (MessageBox.Show("Bạn có chắc chắn muốn chỉnh sửa thông tin khách hàng này?", "Chỉnh sửa thông tin khách hàng", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        cm = new SqlCommand("UPDATE tbCustomer SET vid = @vid, name = @name, phone = @phone, no = @no, model = @model, address = @address, points = @points WHERE id = @id", dbcon.connect());
+                        cm.Parameters.AddWithValue("@id", lblCid.Text); // ID khách hàng
+                        cm.Parameters.AddWithValue("@vid", cbType.SelectedValue); // Lưu id của loại thiết bị
+                        cm.Parameters.AddWithValue("@name", txtName.Text);
+                        cm.Parameters.AddWithValue("@phone", txtPhone.Text);
+                        cm.Parameters.AddWithValue("@no", txtNo.Text); // Mã thiết bị
+                        cm.Parameters.AddWithValue("@model", txtModel.Text); // Model thiết bị
+                        cm.Parameters.AddWithValue("@address", txtAddress.Text);
+                        cm.Parameters.AddWithValue("@points", udPoints.Value); // Sử dụng Value thay vì Text cho điểm số
+
+                        dbcon.open(); // Mở kết nối
+                        cm.ExecuteNonQuery();
+                        dbcon.close(); // Đóng kết nối
+                        MessageBox.Show("Khách hàng đã được chỉnh sửa thành công!", title);
+                        this.Dispose();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, title);
+            }
+        }
+
+        private void btnCancel_Click_1(object sender, EventArgs e)
+        {
+            Clear();
+        }
     }
 }
