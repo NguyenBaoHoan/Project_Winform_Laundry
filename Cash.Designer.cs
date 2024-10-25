@@ -99,9 +99,9 @@
             this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.Location = new System.Drawing.Point(532, 24);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(40, 19);
+            this.lblTotal.Size = new System.Drawing.Size(49, 19);
             this.lblTotal.TabIndex = 9;
-            this.lblTotal.Text = "0.00";
+            this.lblTotal.Text = "0.000";
             // 
             // btnCash
             // 

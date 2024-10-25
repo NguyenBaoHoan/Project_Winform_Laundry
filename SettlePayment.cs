@@ -18,7 +18,7 @@ namespace Project1_Laundry
         string title = "Laundry Shop";
         public SettlePayment(Cash cashForm)
         {
-            InitializeComponent();
+            InitializeComponent();  
             context = new LaundryContextDB();
             cash = cashForm;    
         }
@@ -27,70 +27,16 @@ namespace Project1_Laundry
         {
             this.Dispose();
         }
-        private void btnPoint_Click(object sender, EventArgs e)
+        private void btnPoint_Click_1(object sender, EventArgs e)
         {
             txtCash.Text += btnPoint.Text;
 
         }
 
-        private void btn0_Click(object sender, EventArgs e)
-        {
-            txtCash.Text = btn0.Text;
-        }
 
-        private void btn1_Click(object sender, EventArgs e)
-        {
-            txtCash.Text += btn1.Text;
-        }
-
-        private void btn2_Click(object sender, EventArgs e)
+        private void btn2_Click_1(object sender, EventArgs e)
         {
             txtCash.Text += btn2.Text;
-        }
-
-        private void btn3_Click(object sender, EventArgs e)
-        {
-            txtCash.Text += btn3.Text;
-        }
-
-        private void btn4_Click(object sender, EventArgs e)
-        {
-            txtCash.Text += btn4.Text;
-        }
-
-        private void btn5_Click(object sender, EventArgs e)
-        {
-            txtCash.Text += btn5.Text;
-        }
-
-        private void btn6_Click(object sender, EventArgs e)
-        {
-            txtCash.Text += btn6.Text;
-        }
-
-        private void btn7_Click(object sender, EventArgs e)
-        {
-            txtCash.Text += btn7.Text;
-        }
-
-        private void btn8_Click(object sender, EventArgs e)
-        {
-            txtCash.Text += btn8.Text;
-        }
-
-        private void btn9_Click(object sender, EventArgs e)
-        {
-            txtCash.Text += btn9.Text;
-        }
-
-        private void btn00_Click(object sender, EventArgs e)
-        {
-            txtCash.Text += btn00.Text;
-        }
-        private void btnClean_Click(object sender, EventArgs e)
-        {
-            txtCash.Clear();
-            txtCash.Focus(); // dấu nhau quay lại cash
         }
 
         private void btnEnter_Click(object sender, EventArgs e)
@@ -137,7 +83,8 @@ namespace Project1_Laundry
                     cash.btnAddService.Enabled = false;
                     cash.getTransno();
                 }
-            
+            }
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, title);
@@ -150,12 +97,84 @@ namespace Project1_Laundry
             try
             {
                 double charge = double.Parse(txtCash.Text) - double.Parse(txtSale.Text);
-                txtChange.Text = charge.ToString();
+                txtChange.Text = charge.ToString("#,##0.000");
             }
             catch (Exception)
             {
-                txtChange.Text = "0.00";
+                txtChange.Text = "0.000";
             }
+        }
+
+        private void SettlePayment_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnEnter.PerformClick();// action click enter button
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                this.Dispose(); // Đóng form hiện tại
+            }
+        }
+
+        private void btnClean_Click_1(object sender, EventArgs e)
+        {
+            txtCash.Clear();
+            txtCash.Focus(); // dấu nhau quay lại cash
+        }
+
+        
+
+        
+
+        private void btn3_Click(object sender, EventArgs e)
+        {
+            txtCash.Text += btn3.Text;
+        }
+
+        private void btn00_Click(object sender, EventArgs e)
+        {
+            txtCash.Text += btn00.Text;
+        }
+
+        private void btn6_Click(object sender, EventArgs e)
+        {
+            txtCash.Text += btn6.Text;
+        }
+
+        private void btn4_Click(object sender, EventArgs e)
+        {
+            txtCash.Text += btn4.Text;
+        }
+
+        private void btn5_Click(object sender, EventArgs e)
+        {
+            txtCash.Text += btn5.Text;
+        }
+
+        private void btn7_Click(object sender, EventArgs e)
+        {
+            txtCash.Text += btn7.Text;
+        }
+
+        private void btn8_Click(object sender, EventArgs e)
+        {
+            txtCash.Text += btn8.Text;
+        }
+
+        private void btn9_Click(object sender, EventArgs e)
+        {
+            txtCash.Text += btn9.Text;
+        }
+
+        private void btn0_Click(object sender, EventArgs e)
+        {
+            txtCash.Text += btn0.Text;
+        }
+
+        private void btn1_Click(object sender, EventArgs e)
+        {
+            txtCash.Text += btn1.Text;
         }
     }
 }

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -28,14 +29,15 @@ namespace Project1_Laundry
 
         private void textSearch_TextChanged(object sender, EventArgs e)
         {
-            LoadCustomerData();
+            
         }
 
-        private void LoadCustomerData()
+        private async void LoadCustomerData()
         {
             try
             {
-                var query = context.tbCustomers.AsQueryable();
+                // Sử dụng AsNoTracking() để không theo dõi các thay đổi - cải thiện hiệu năng
+                var query = context.tbCustomers.AsNoTracking().AsQueryable();
 
                 if (!string.IsNullOrEmpty(txtSearch.Text))
                 {
@@ -44,7 +46,9 @@ namespace Project1_Laundry
                         (c.name + " " + c.phone + " " + c.address).ToLower().Contains(searchText));
                 }
 
-                var customerList = query.ToList();
+                // Sử dụng async/await để truy vấn dữ liệu không đồng bộ
+                var customerList = await query.ToListAsync();
+
                 dgvCustomer.Rows.Clear();
 
                 int i = 0;
@@ -53,9 +57,10 @@ namespace Project1_Laundry
                     dgvCustomer.Rows.Add(
                         ++i,
                         customer.id,
-                        customer.vid,
+                        customer.vid ?? 0,  // Xử lý giá trị null cho vid
                         customer.name,
                         customer.phone,
+                        customer.no,
                         customer.model,
                         customer.address,
                         customer.points
@@ -64,9 +69,13 @@ namespace Project1_Laundry
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading customers: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error loading customers: {ex.Message}",
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
             }
         }
+
 
         private void dgvCustomer_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
@@ -95,6 +104,11 @@ namespace Project1_Laundry
             {
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            LoadCustomerData();
         }
     }
 }

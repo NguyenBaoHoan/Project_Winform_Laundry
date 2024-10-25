@@ -49,6 +49,10 @@
             this.btn9 = new System.Windows.Forms.Button();
             this.txtCash = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,12 +64,13 @@
             this.btnPoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPoint.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPoint.ForeColor = System.Drawing.Color.White;
-            this.btnPoint.Location = new System.Drawing.Point(144, 388);
+            this.btnPoint.Location = new System.Drawing.Point(181, 386);
             this.btnPoint.Name = "btnPoint";
-            this.btnPoint.Size = new System.Drawing.Size(60, 60);
+            this.btnPoint.Size = new System.Drawing.Size(60, 58);
             this.btnPoint.TabIndex = 34;
             this.btnPoint.Text = ".";
             this.btnPoint.UseVisualStyleBackColor = false;
+            this.btnPoint.Click += new System.EventHandler(this.btnPoint_Click_1);
             // 
             // btn0
             // 
@@ -74,9 +79,9 @@
             this.btn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn0.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn0.ForeColor = System.Drawing.Color.White;
-            this.btn0.Location = new System.Drawing.Point(12, 388);
+            this.btn0.Location = new System.Drawing.Point(49, 386);
             this.btn0.Name = "btn0";
-            this.btn0.Size = new System.Drawing.Size(126, 60);
+            this.btn0.Size = new System.Drawing.Size(126, 58);
             this.btn0.TabIndex = 35;
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = false;
@@ -89,9 +94,9 @@
             this.btnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnter.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnter.ForeColor = System.Drawing.Color.White;
-            this.btnEnter.Location = new System.Drawing.Point(210, 322);
+            this.btnEnter.Location = new System.Drawing.Point(247, 320);
             this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(60, 126);
+            this.btnEnter.Size = new System.Drawing.Size(60, 124);
             this.btnEnter.TabIndex = 30;
             this.btnEnter.Text = "Enter";
             this.btnEnter.UseVisualStyleBackColor = false;
@@ -104,12 +109,13 @@
             this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn3.ForeColor = System.Drawing.Color.White;
-            this.btn3.Location = new System.Drawing.Point(144, 322);
+            this.btn3.Location = new System.Drawing.Point(181, 320);
             this.btn3.Name = "btn3";
-            this.btn3.Size = new System.Drawing.Size(60, 60);
+            this.btn3.Size = new System.Drawing.Size(60, 58);
             this.btn3.TabIndex = 31;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = false;
+            this.btn3.Click += new System.EventHandler(this.btn3_Click);
             // 
             // btn2
             // 
@@ -118,12 +124,13 @@
             this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn2.ForeColor = System.Drawing.Color.White;
-            this.btn2.Location = new System.Drawing.Point(78, 322);
+            this.btn2.Location = new System.Drawing.Point(115, 320);
             this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(60, 60);
+            this.btn2.Size = new System.Drawing.Size(60, 58);
             this.btn2.TabIndex = 32;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = false;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click_1);
             // 
             // btn1
             // 
@@ -132,9 +139,9 @@
             this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn1.ForeColor = System.Drawing.Color.White;
-            this.btn1.Location = new System.Drawing.Point(12, 322);
+            this.btn1.Location = new System.Drawing.Point(49, 320);
             this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(60, 60);
+            this.btn1.Size = new System.Drawing.Size(60, 58);
             this.btn1.TabIndex = 33;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = false;
@@ -147,12 +154,13 @@
             this.btn00.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn00.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn00.ForeColor = System.Drawing.Color.White;
-            this.btn00.Location = new System.Drawing.Point(210, 256);
+            this.btn00.Location = new System.Drawing.Point(247, 254);
             this.btn00.Name = "btn00";
-            this.btn00.Size = new System.Drawing.Size(60, 60);
+            this.btn00.Size = new System.Drawing.Size(60, 58);
             this.btn00.TabIndex = 26;
             this.btn00.Text = "00";
             this.btn00.UseVisualStyleBackColor = false;
+            this.btn00.Click += new System.EventHandler(this.btn00_Click);
             // 
             // btn6
             // 
@@ -161,12 +169,13 @@
             this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn6.ForeColor = System.Drawing.Color.White;
-            this.btn6.Location = new System.Drawing.Point(144, 256);
+            this.btn6.Location = new System.Drawing.Point(181, 254);
             this.btn6.Name = "btn6";
-            this.btn6.Size = new System.Drawing.Size(60, 60);
+            this.btn6.Size = new System.Drawing.Size(60, 58);
             this.btn6.TabIndex = 27;
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = false;
+            this.btn6.Click += new System.EventHandler(this.btn6_Click);
             // 
             // btn5
             // 
@@ -175,12 +184,13 @@
             this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn5.ForeColor = System.Drawing.Color.White;
-            this.btn5.Location = new System.Drawing.Point(78, 256);
+            this.btn5.Location = new System.Drawing.Point(115, 254);
             this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(60, 60);
+            this.btn5.Size = new System.Drawing.Size(60, 58);
             this.btn5.TabIndex = 28;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = false;
+            this.btn5.Click += new System.EventHandler(this.btn5_Click);
             // 
             // btn4
             // 
@@ -189,12 +199,13 @@
             this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn4.ForeColor = System.Drawing.Color.White;
-            this.btn4.Location = new System.Drawing.Point(12, 256);
+            this.btn4.Location = new System.Drawing.Point(49, 254);
             this.btn4.Name = "btn4";
-            this.btn4.Size = new System.Drawing.Size(60, 60);
+            this.btn4.Size = new System.Drawing.Size(60, 58);
             this.btn4.TabIndex = 29;
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = false;
+            this.btn4.Click += new System.EventHandler(this.btn4_Click);
             // 
             // btnClean
             // 
@@ -203,12 +214,13 @@
             this.btnClean.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClean.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClean.ForeColor = System.Drawing.Color.White;
-            this.btnClean.Location = new System.Drawing.Point(210, 190);
+            this.btnClean.Location = new System.Drawing.Point(247, 188);
             this.btnClean.Name = "btnClean";
-            this.btnClean.Size = new System.Drawing.Size(60, 60);
+            this.btnClean.Size = new System.Drawing.Size(60, 58);
             this.btnClean.TabIndex = 25;
             this.btnClean.Text = "C";
             this.btnClean.UseVisualStyleBackColor = false;
+            this.btnClean.Click += new System.EventHandler(this.btnClean_Click_1);
             // 
             // btn8
             // 
@@ -217,12 +229,13 @@
             this.btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn8.ForeColor = System.Drawing.Color.White;
-            this.btn8.Location = new System.Drawing.Point(78, 190);
+            this.btn8.Location = new System.Drawing.Point(115, 188);
             this.btn8.Name = "btn8";
-            this.btn8.Size = new System.Drawing.Size(60, 60);
+            this.btn8.Size = new System.Drawing.Size(60, 58);
             this.btn8.TabIndex = 24;
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = false;
+            this.btn8.Click += new System.EventHandler(this.btn8_Click);
             // 
             // btn7
             // 
@@ -231,37 +244,38 @@
             this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn7.ForeColor = System.Drawing.Color.White;
-            this.btn7.Location = new System.Drawing.Point(12, 190);
+            this.btn7.Location = new System.Drawing.Point(49, 188);
             this.btn7.Name = "btn7";
-            this.btn7.Size = new System.Drawing.Size(60, 60);
+            this.btn7.Size = new System.Drawing.Size(60, 58);
             this.btn7.TabIndex = 23;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = false;
+            this.btn7.Click += new System.EventHandler(this.btn7_Click);
             // 
             // txtChange
             // 
-            this.txtChange.Location = new System.Drawing.Point(12, 133);
+            this.txtChange.Location = new System.Drawing.Point(91, 123);
             this.txtChange.Multiline = true;
             this.txtChange.Name = "txtChange";
             this.txtChange.ReadOnly = true;
-            this.txtChange.Size = new System.Drawing.Size(258, 33);
+            this.txtChange.Size = new System.Drawing.Size(256, 33);
             this.txtChange.TabIndex = 21;
             this.txtChange.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtSale
             // 
-            this.txtSale.Location = new System.Drawing.Point(12, 55);
+            this.txtSale.Location = new System.Drawing.Point(91, 45);
             this.txtSale.Multiline = true;
             this.txtSale.Name = "txtSale";
             this.txtSale.ReadOnly = true;
-            this.txtSale.Size = new System.Drawing.Size(258, 33);
+            this.txtSale.Size = new System.Drawing.Size(256, 33);
             this.txtSale.TabIndex = 19;
             this.txtSale.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // picClose
             // 
             this.picClose.Image = ((System.Drawing.Image)(resources.GetObject("picClose.Image")));
-            this.picClose.Location = new System.Drawing.Point(252, 2);
+            this.picClose.Location = new System.Drawing.Point(318, 3);
             this.picClose.Name = "picClose";
             this.picClose.Size = new System.Drawing.Size(29, 32);
             this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -285,19 +299,20 @@
             this.btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn9.ForeColor = System.Drawing.Color.White;
-            this.btn9.Location = new System.Drawing.Point(144, 190);
+            this.btn9.Location = new System.Drawing.Point(181, 188);
             this.btn9.Name = "btn9";
-            this.btn9.Size = new System.Drawing.Size(60, 60);
+            this.btn9.Size = new System.Drawing.Size(60, 58);
             this.btn9.TabIndex = 22;
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = false;
+            this.btn9.Click += new System.EventHandler(this.btn9_Click);
             // 
             // txtCash
             // 
-            this.txtCash.Location = new System.Drawing.Point(12, 94);
+            this.txtCash.Location = new System.Drawing.Point(91, 84);
             this.txtCash.Multiline = true;
             this.txtCash.Name = "txtCash";
-            this.txtCash.Size = new System.Drawing.Size(258, 33);
+            this.txtCash.Size = new System.Drawing.Size(256, 33);
             this.txtCash.TabIndex = 20;
             this.txtCash.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtCash.TextChanged += new System.EventHandler(this.txtCash_TextChanged);
@@ -311,13 +326,52 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(284, 35);
+            this.panel1.Size = new System.Drawing.Size(357, 35);
             this.panel1.TabIndex = 18;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 20);
+            this.label2.TabIndex = 36;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(8, 97);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 20);
+            this.label3.TabIndex = 36;
+            this.label3.Text = "Tiền mặt :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(8, 136);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 20);
+            this.label4.TabIndex = 36;
+            this.label4.Text = "Hoàn trả :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(8, 58);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 20);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "Tổng tiền :";
             // 
             // SettlePayment
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(284, 458);
+            this.ClientSize = new System.Drawing.Size(357, 458);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnPoint);
             this.Controls.Add(this.btn0);
             this.Controls.Add(this.btnEnter);
@@ -340,6 +394,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SettlePayment";
             this.Text = "SettlePayment";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SettlePayment_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -370,5 +425,9 @@
         private System.Windows.Forms.Button btn9;
         private System.Windows.Forms.TextBox txtCash;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

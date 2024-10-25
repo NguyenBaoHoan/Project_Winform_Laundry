@@ -18,7 +18,7 @@ namespace Project1_Laundry
         SqlCommand cm = new SqlCommand();
         dbConnect dbcon = new dbConnect(); // Đối tượng kết nối với cơ sở dữ liệu
         SqlDataReader dr; // Đối tượng đọc dữ liệu từ cơ sở dữ liệu
-        string title = "Hệ Thống Quản Lý Tiệm Sửa Chữa Đồ Gia Dụng"; // Tiêu đề của chương trình
+        string title = "Laundry Shop"; // Tiêu đề của chương trình
 
         public Customer()
         {

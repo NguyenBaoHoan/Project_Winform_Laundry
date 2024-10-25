@@ -82,6 +82,8 @@ namespace Project1_Laundry
             
         }
 
+        
+
         // create 1 hàm lấy số thứ tự dựa vào ngày 
         public void getTransno()
         {
@@ -163,7 +165,7 @@ namespace Project1_Laundry
                     model = cash.Model;
                 }
 
-                lblTotal.Text = total.ToString("#,##0.00");
+                lblTotal.Text = total.ToString("#,##0.000");
             }
             catch (Exception ex)
             {

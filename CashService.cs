@@ -35,8 +35,6 @@ namespace Project1_Laundry
         {
             try
             {
-
-
                 foreach (DataGridViewRow dr in dgvService.Rows)
                 {
                     bool chkbox = dr.Cells["Select"].Value != null && Convert.ToBoolean(dr.Cells["Select"].Value);
