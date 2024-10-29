@@ -48,7 +48,7 @@ namespace Project1_Laundry
 
                 if (employer != null)
                 {
-                    MessageBox.Show("Chào mừng " + employer.name + " | ", "Bạn đã đăng nhập thành công!",
+                    MessageBox.Show("Chào mừng " + employer.name + " ", "Bạn đã đăng nhập thành công!",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     this.Hide();

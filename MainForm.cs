@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace Project1_Laundry
@@ -21,8 +22,6 @@ namespace Project1_Laundry
         {
             throw new NotImplementedException();
         }
-
-
 
         // Khai báo biến Form đang hoạt động, khởi tạo bằng null
         private Form activeForm = null;
@@ -86,17 +85,32 @@ namespace Project1_Laundry
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new Report());
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new Setting());
         }
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn đăng xuất không?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+                LoginForm login = new LoginForm();
+                login.ShowDialog();
+            }
+        }
+
+        private void guna2Button9_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

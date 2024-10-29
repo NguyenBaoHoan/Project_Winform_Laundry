@@ -1,107 +1,144 @@
-﻿using System;
+﻿using LiveCharts.Wpf.Charts.Base;
+using Project1_Laundry.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Project1_Laundry
 {
     public partial class CustomerModule : Form
     {
-        SqlCommand cm = new SqlCommand();
-        dbConnect dbcon = new dbConnect();
-        string title = "Hệ Thống Quản Lý Tiệm Sửa Chữa Đồ Gia Dụng";
+        private readonly LaundryContextDB context;
+        private readonly Customer customerForm;  // Tham chiếu tới form Customer
         bool check = false;
-        public int vid = 0;
-        Customer customer;
+        string title = "Laundry Shop";
+        internal int vid;
+
         public CustomerModule(Customer cust)
         {
             InitializeComponent();
-            customer = cust;
+            context = new LaundryContextDB();  // Khởi tạo DbContext
+            customerForm = cust;  // Gán tham chiếu tới form chính
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Dispose();  // Đóng form
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
-                checkField();
+                checkField();  // Kiểm tra dữ liệu
                 if (check)
                 {
-                    if (MessageBox.Show("Bạn có chắc chắn muốn đăng ký khách hàng này?", "Đăng ký khách hàng", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Bạn có chắc chắn muốn đăng ký khách hàng này?",
+                        "Đăng ký khách hàng", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        cm = new SqlCommand("INSERT INTO tbCustomer(vid, name, phone, no, model, address, points) VALUES(@vid, @name, @phone, @no, @model, @address, @points)", dbcon.connect());
-                        cm.Parameters.AddWithValue("@vid", cbType.SelectedValue); // Lưu id của loại thiết bị
-                        cm.Parameters.AddWithValue("@name", txtName.Text);
-                        cm.Parameters.AddWithValue("@phone", txtPhone.Text);
-                        cm.Parameters.AddWithValue("@no", txtNo.Text); // Mã thiết bị
-                        cm.Parameters.AddWithValue("@model", txtModel.Text); // Model thiết bị
-                        cm.Parameters.AddWithValue("@address", txtAddress.Text);
-                        cm.Parameters.AddWithValue("@points", udPoints.Value); // Sử dụng Value thay vì Text cho điểm số
+                        var newCustomer = new tbCustomer
+                        {
+                            idType = (int)cbType.SelectedValue,
+                            name = txtName.Text,
+                            phone = txtPhone.Text,
+                            no = txtNo.Text,
+                            model = txtModel.Text,
+                            address = txtAddress.Text,
+                            points = (int)udPoints.Value
+                        };
 
-                        dbcon.open(); // Mở kết nối
-                        cm.ExecuteNonQuery();
-                        dbcon.close(); // Đóng kết nối
+                        context.tbCustomers.Add(newCustomer);  // Thêm vào DbSet
+                        context.SaveChanges();  // Lưu thay đổi vào CSDL
+
                         MessageBox.Show("Khách hàng đã được đăng ký thành công!", title);
-                        check = false;
-                        Clear(); // Xóa các trường dữ liệu sau khi đã thêm thành công
+
+                        Clear();  // Xóa các trường dữ liệu sau khi lưu thành công
+                        customerForm.LoadCustomerData(context.tbCustomers.ToList());  // Cập nhật danh sách khách hàng
                     }
                 }
-                customer.loadCustomer();
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, title);
+                MessageBox.Show($"Error: {ex.Message}", title, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        
+        private void btnUpdate_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                checkField();  // Kiểm tra dữ liệu
+                if (check)
+                {
+                    if (MessageBox.Show("Bạn có chắc chắn muốn chỉnh sửa thông tin khách hàng này?",
+                        "Chỉnh sửa thông tin khách hàng", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        if (int.TryParse(lblCid.Text, out int customerId))
+                        {
+                            var customer = context.tbCustomers.Find(customerId);
+                            if (customer != null)
+                            {
+                                customer.idType = (int)cbType.SelectedValue;
+                                customer.name = txtName.Text;
+                                customer.phone = txtPhone.Text;
+                                customer.no = txtNo.Text;
+                                customer.model = txtModel.Text;
+                                customer.address = txtAddress.Text;
+                                customer.points = (int)udPoints.Value;
 
-       
-        // Tải khi form bắt đầu
+                                context.SaveChanges();  // Lưu thay đổi
+
+                                MessageBox.Show("Khách hàng đã được chỉnh sửa thành công!", title);
+
+                                Clear();  // Xóa các trường dữ liệu sau khi cập nhật
+                                customerForm.LoadCustomerData(context.tbCustomers.ToList());  // Cập nhật danh sách khách hàng
+                                this.Dispose();  // Đóng form
+                            }
+                            else
+                            {
+                                MessageBox.Show("Không tìm thấy khách hàng!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnCancel_Click_1(object sender, EventArgs e)
+        {
+            Clear();  // Xóa dữ liệu và đặt lại form
+        }
+
+        // Tải dữ liệu loại thiết bị vào combobox khi form được mở
         private void CustomerModule_Load(object sender, EventArgs e)
         {
-            // Thêm danh sách loại thiết bị vào combobox
-            cbType.DataSource = loaiThietBi();
-            cbType.DisplayMember = "name"; // Giữ nguyên tên trường
-            cbType.ValueMember = "id";     // Giữ nguyên tên trường
-            if (vid > 0)
-                cbType.SelectedValue = vid;
+            cbType.DataSource = context.tbTypes.ToList();  // Lấy danh sách loại thiết bị
+            cbType.DisplayMember = "name";
+            cbType.ValueMember = "id";
+
+
         }
 
-        #region method
-        // Hàm để lấy danh sách loại thiết bị trả về bảng dữ liệu
-        public DataTable loaiThietBi()
-        {
-            cm = new SqlCommand("SELECT * FROM tbType", dbcon.connect());
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            DataTable dataTable = new DataTable();
-
-            adapter.SelectCommand = cm;
-            adapter.Fill(dataTable);
-
-            return dataTable;
-        }
-
-        // Hàm để xóa các trường dữ liệu
         public void Clear()
         {
-            txtAddress.Clear();
-            txtModel.Clear();
-            txtNo.Clear();
             txtName.Clear();
             txtPhone.Clear();
-
+            txtNo.Clear();
+            txtModel.Clear();
+            txtAddress.Clear();
             cbType.SelectedIndex = 0;
             udPoints.Value = 0;
 
@@ -111,52 +148,20 @@ namespace Project1_Laundry
 
         public void checkField()
         {
-            if (txtAddress.Text == "" || txtName.Text == "" || txtPhone.Text == "" || txtNo.Text == "" || txtModel.Text == "")
+            if (string.IsNullOrEmpty(txtName.Text) ||
+                string.IsNullOrEmpty(txtPhone.Text) ||
+                string.IsNullOrEmpty(txtNo.Text) ||
+                string.IsNullOrEmpty(txtModel.Text) ||
+                string.IsNullOrEmpty(txtAddress.Text))
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Cảnh báo");
-                return; // Quay lại form để điền thông tin còn thiếu
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                check = false;
+                return;
             }
 
             check = true;
         }
-        #endregion method
 
-        private void btnUpdate_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                checkField();
-                if (check)
-                {
-                    if (MessageBox.Show("Bạn có chắc chắn muốn chỉnh sửa thông tin khách hàng này?", "Chỉnh sửa thông tin khách hàng", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        cm = new SqlCommand("UPDATE tbCustomer SET vid = @vid, name = @name, phone = @phone, no = @no, model = @model, address = @address, points = @points WHERE id = @id", dbcon.connect());
-                        cm.Parameters.AddWithValue("@id", lblCid.Text); // ID khách hàng
-                        cm.Parameters.AddWithValue("@vid", cbType.SelectedValue); // Lưu id của loại thiết bị
-                        cm.Parameters.AddWithValue("@name", txtName.Text);
-                        cm.Parameters.AddWithValue("@phone", txtPhone.Text);
-                        cm.Parameters.AddWithValue("@no", txtNo.Text); // Mã thiết bị
-                        cm.Parameters.AddWithValue("@model", txtModel.Text); // Model thiết bị
-                        cm.Parameters.AddWithValue("@address", txtAddress.Text);
-                        cm.Parameters.AddWithValue("@points", udPoints.Value); // Sử dụng Value thay vì Text cho điểm số
 
-                        dbcon.open(); // Mở kết nối
-                        cm.ExecuteNonQuery();
-                        dbcon.close(); // Đóng kết nối
-                        MessageBox.Show("Khách hàng đã được chỉnh sửa thành công!", title);
-                        this.Dispose();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, title);
-            }
-        }
-
-        private void btnCancel_Click_1(object sender, EventArgs e)
-        {
-            Clear();
-        }
     }
 }

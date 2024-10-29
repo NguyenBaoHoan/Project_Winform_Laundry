@@ -56,7 +56,7 @@ namespace Project1_Laundry
                                 transno = cash.lblTransno.Text,
                                 cid = cash.customerId,
                                 sid = sid,
-                                vid = cash.TypeId,
+                                idType = cash.TypeId,
                                 price = price,
                                 date = DateTime.Now,
                                 status = "Pending"  // Thêm status mặc định

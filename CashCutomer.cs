@@ -57,7 +57,7 @@ namespace Project1_Laundry
                     dgvCustomer.Rows.Add(
                         ++i,
                         customer.id,
-                        customer.vid ?? 0,  // Xử lý giá trị null cho vid
+                        customer.idType ?? 0,  // Xử lý giá trị null cho vid
                         customer.name,
                         customer.phone,
                         customer.no,

@@ -18,7 +18,7 @@ namespace Project1_Laundry.Models
 
         public int? sid { get; set; }
 
-        public int? vid { get; set; }
+        public int? idType { get; set; }
 
         [StringLength(200)]
         public string price { get; set; }

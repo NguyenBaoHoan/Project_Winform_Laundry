@@ -16,7 +16,7 @@ namespace Project1_Laundry
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Employee());
+            Application.Run(new Load());
         }
     }
 }

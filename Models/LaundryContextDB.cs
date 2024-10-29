@@ -44,7 +44,12 @@ namespace Project1_Laundry.Models
             modelBuilder.Entity<tbType>()
                 .HasMany(e => e.tbCashes)
                 .WithOptional(e => e.tbType)
-                .HasForeignKey(e => e.vid);
+                .HasForeignKey(e => e.idType);
+
+            modelBuilder.Entity<tbType>()
+                .HasMany(e => e.tbCustomers)
+                .WithOptional(e => e.tbType)
+                .HasForeignKey(e => e.idType);
         }
     }
 }

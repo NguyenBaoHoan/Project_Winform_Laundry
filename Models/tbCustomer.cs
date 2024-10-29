@@ -17,7 +17,7 @@ namespace Project1_Laundry.Models
 
         public int id { get; set; }
 
-        public int? vid { get; set; }
+        public int? idType { get; set; }
 
         [StringLength(100)]
         public string name { get; set; }
@@ -38,5 +38,7 @@ namespace Project1_Laundry.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbCash> tbCashes { get; set; }
+
+        public virtual tbType tbType { get; set; }
     }
 }

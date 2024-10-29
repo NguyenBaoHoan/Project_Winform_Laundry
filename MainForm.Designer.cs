@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.btncash = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
             this.btnSetting = new Guna.UI2.WinForms.Guna2Button();
             this.btnReport = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
@@ -65,8 +65,6 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
             this.panelChild = new System.Windows.Forms.Panel();
-            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
-            this.label20 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.guna2GradientPanel4.SuspendLayout();
@@ -78,14 +76,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.guna2GradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panelChild.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnLogout);
             this.panel2.Controls.Add(this.btncash);
-            this.panel2.Controls.Add(this.guna2Button10);
             this.panel2.Controls.Add(this.btnSetting);
             this.panel2.Controls.Add(this.btnReport);
             this.panel2.Controls.Add(this.guna2Button5);
@@ -98,6 +95,23 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(180, 559);
             this.panel2.TabIndex = 5;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(0, 514);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(180, 45);
+            this.btnLogout.TabIndex = 11;
+            this.btnLogout.Text = "Đăng xuất";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btncash
             // 
@@ -116,6 +130,7 @@
             this.btncash.Image = ((System.Drawing.Image)(resources.GetObject("btncash.Image")));
             this.btncash.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btncash.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btncash.ImageSize = new System.Drawing.Size(25, 25);
             this.btncash.Location = new System.Drawing.Point(0, 205);
             this.btncash.Name = "btncash";
             this.btncash.Size = new System.Drawing.Size(177, 45);
@@ -124,25 +139,6 @@
             this.btncash.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btncash.TextOffset = new System.Drawing.Point(25, 0);
             this.btncash.Click += new System.EventHandler(this.btncash_Click);
-            // 
-            // guna2Button10
-            // 
-            this.guna2Button10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.guna2Button10.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button10.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.guna2Button10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button10.ForeColor = System.Drawing.Color.Gray;
-            this.guna2Button10.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button10.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button10.Image")));
-            this.guna2Button10.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button10.Location = new System.Drawing.Point(1, 521);
-            this.guna2Button10.Name = "guna2Button10";
-            this.guna2Button10.Size = new System.Drawing.Size(42, 38);
-            this.guna2Button10.TabIndex = 7;
-            this.guna2Button10.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btnSetting
             // 
@@ -161,11 +157,12 @@
             this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
             this.btnSetting.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSetting.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnSetting.ImageSize = new System.Drawing.Size(25, 25);
             this.btnSetting.Location = new System.Drawing.Point(3, 307);
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Size = new System.Drawing.Size(177, 45);
             this.btnSetting.TabIndex = 1;
-            this.btnSetting.Text = "Settings";
+            this.btnSetting.Text = "Setting";
             this.btnSetting.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSetting.TextOffset = new System.Drawing.Point(25, 0);
             this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
@@ -183,10 +180,11 @@
             this.btnReport.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(170)))), ((int)(((byte)(231)))));
             this.btnReport.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(170)))), ((int)(((byte)(231)))));
             this.btnReport.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnReport.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btnReport.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
             this.btnReport.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnReport.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnReport.ImageSize = new System.Drawing.Size(26, 26);
             this.btnReport.Location = new System.Drawing.Point(3, 256);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(177, 45);
@@ -209,10 +207,11 @@
             this.guna2Button5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(170)))), ((int)(((byte)(231)))));
             this.guna2Button5.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(170)))), ((int)(((byte)(231)))));
             this.guna2Button5.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.guna2Button5.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.guna2Button5.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.Image")));
             this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button5.ImageOffset = new System.Drawing.Point(10, 0);
+            this.guna2Button5.ImageSize = new System.Drawing.Size(25, 25);
             this.guna2Button5.Location = new System.Drawing.Point(3, 358);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.Size = new System.Drawing.Size(177, 45);
@@ -235,10 +234,11 @@
             this.btnService.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(170)))), ((int)(((byte)(231)))));
             this.btnService.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(170)))), ((int)(((byte)(231)))));
             this.btnService.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnService.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
+            this.btnService.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
             this.btnService.Image = ((System.Drawing.Image)(resources.GetObject("btnService.Image")));
             this.btnService.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnService.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnService.ImageSize = new System.Drawing.Size(25, 25);
             this.btnService.Location = new System.Drawing.Point(3, 154);
             this.btnService.Name = "btnService";
             this.btnService.Size = new System.Drawing.Size(177, 45);
@@ -261,10 +261,11 @@
             this.btnCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(170)))), ((int)(((byte)(231)))));
             this.btnCustomer.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(170)))), ((int)(((byte)(231)))));
             this.btnCustomer.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnCustomer.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
+            this.btnCustomer.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
             this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
             this.btnCustomer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCustomer.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnCustomer.ImageSize = new System.Drawing.Size(25, 25);
             this.btnCustomer.Location = new System.Drawing.Point(3, 103);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Size = new System.Drawing.Size(177, 45);
@@ -287,10 +288,11 @@
             this.btnEmployer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(170)))), ((int)(((byte)(231)))));
             this.btnEmployer.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(170)))), ((int)(((byte)(231)))));
             this.btnEmployer.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnEmployer.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
+            this.btnEmployer.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
             this.btnEmployer.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployer.Image")));
             this.btnEmployer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnEmployer.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnEmployer.ImageSize = new System.Drawing.Size(25, 25);
             this.btnEmployer.Location = new System.Drawing.Point(3, 52);
             this.btnEmployer.Name = "btnEmployer";
             this.btnEmployer.Size = new System.Drawing.Size(177, 45);
@@ -313,10 +315,11 @@
             this.btnHome.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(170)))), ((int)(((byte)(231)))));
             this.btnHome.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(170)))), ((int)(((byte)(231)))));
             this.btnHome.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnHome.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
+            this.btnHome.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHome.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnHome.ImageSize = new System.Drawing.Size(25, 25);
             this.btnHome.Location = new System.Drawing.Point(3, 1);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(177, 45);
@@ -471,6 +474,7 @@
             this.guna2Button9.Size = new System.Drawing.Size(42, 38);
             this.guna2Button9.TabIndex = 5;
             this.guna2Button9.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button9.Click += new System.EventHandler(this.guna2Button9_Click);
             // 
             // guna2Button7
             // 
@@ -666,30 +670,10 @@
             // 
             this.panelChild.AutoSize = true;
             this.panelChild.BackColor = System.Drawing.Color.White;
-            this.panelChild.Controls.Add(this.cartesianChart1);
-            this.panelChild.Controls.Add(this.label20);
             this.panelChild.Location = new System.Drawing.Point(52, 36);
             this.panelChild.Name = "panelChild";
             this.panelChild.Size = new System.Drawing.Size(965, 485);
             this.panelChild.TabIndex = 2;
-            // 
-            // cartesianChart1
-            // 
-            this.cartesianChart1.Location = new System.Drawing.Point(22, 69);
-            this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(902, 387);
-            this.cartesianChart1.TabIndex = 3;
-            this.cartesianChart1.Text = "cartesianChart1";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(19, 16);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(72, 16);
-            this.label20.TabIndex = 2;
-            this.label20.Text = "Analytics ";
             // 
             // panel5
             // 
@@ -729,8 +713,6 @@
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panelChild.ResumeLayout(false);
-            this.panelChild.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.ResumeLayout(false);
@@ -739,7 +721,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button10;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2Button btnService;
         private Guna.UI2.WinForms.Guna2Button btnCustomer;
@@ -772,11 +753,10 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private System.Windows.Forms.Panel panelChild;
-        private LiveCharts.WinForms.CartesianChart cartesianChart1;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel5;
         private Guna.UI2.WinForms.Guna2Button btnSetting;
         private Guna.UI2.WinForms.Guna2Button btnReport;
+        private System.Windows.Forms.Button btnLogout;
     }
 }
 

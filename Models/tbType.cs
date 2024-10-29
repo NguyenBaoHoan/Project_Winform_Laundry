@@ -13,6 +13,7 @@ namespace Project1_Laundry.Models
         public tbType()
         {
             tbCashes = new HashSet<tbCash>();
+            tbCustomers = new HashSet<tbCustomer>();
         }
 
         public int id { get; set; }
@@ -26,5 +27,8 @@ namespace Project1_Laundry.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbCash> tbCashes { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tbCustomer> tbCustomers { get; set; }
     }
 }
