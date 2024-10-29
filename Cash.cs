@@ -19,13 +19,13 @@ namespace Project1_Laundry
         public int customerId = 0, TypeId = 0;
         public string no, model;
         MainForm main;
-        public Cash()
+        public Cash(MainForm mainForm)
         {
             InitializeComponent();
             context = new LaundryContextDB();
             getTransno();
             loadCash();
-            //main = MainForm;
+            main = mainForm;
         }
 
         private void Cash_Load(object sender, EventArgs e)
@@ -69,17 +69,16 @@ namespace Project1_Laundry
             childForm.Show();
         }
 
-        private void dgvCash_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
         private void btnCash_Click(object sender, EventArgs e)
         {
-            SettlePayment module = new SettlePayment(this);
-            module.txtSale.Text = lblTotal.Text;
-            module.ShowDialog();
             
+                PaymentMethod paymentMethod = new PaymentMethod(this);
+                paymentMethod.ShowDialog();
+            
+            //SettlePayment module = new SettlePayment(this);
+            //module.txtSale.Text = lblTotal.Text;
+            //module.ShowDialog();
+
         }
 
         

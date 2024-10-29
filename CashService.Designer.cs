@@ -52,9 +52,9 @@
             this.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(205)))), ((int)(((byte)(239)))));
             this.btnSubmit.Image = ((System.Drawing.Image)(resources.GetObject("btnSubmit.Image")));
             this.btnSubmit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSubmit.Location = new System.Drawing.Point(857, 0);
+            this.btnSubmit.Location = new System.Drawing.Point(859, 0);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(94, 35);
+            this.btnSubmit.Size = new System.Drawing.Size(92, 35);
             this.btnSubmit.TabIndex = 6;
             this.btnSubmit.Text = "Thêm";
             this.btnSubmit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

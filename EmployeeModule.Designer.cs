@@ -76,7 +76,7 @@
             this.btnClose.Size = new System.Drawing.Size(38, 38);
             this.btnClose.TabIndex = 35;
             this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
             // 
             // btnCancel
             // 
@@ -300,7 +300,6 @@
             this.cbRole.Name = "cbRole";
             this.cbRole.Size = new System.Drawing.Size(544, 28);
             this.cbRole.TabIndex = 39;
-            this.cbRole.SelectedIndexChanged += new System.EventHandler(this.cbRole_SelectedIndexChanged);
             // 
             // lblEid
             // 

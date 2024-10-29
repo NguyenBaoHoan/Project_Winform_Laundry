@@ -324,7 +324,6 @@
             this.dgvCash.RowHeadersVisible = false;
             this.dgvCash.Size = new System.Drawing.Size(951, 300);
             this.dgvCash.TabIndex = 35;
-            this.dgvCash.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCash_CellContentClick);
             // 
             // Cash
             // 

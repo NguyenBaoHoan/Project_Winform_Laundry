@@ -15,14 +15,14 @@ namespace Project1_Laundry
         public MainForm()
         {
             InitializeComponent();
+            openChildForm(new Home());
         }
-
         internal void loadGrossProfit()
         {
             throw new NotImplementedException();
         }
 
-        
+
 
         // Khai báo biến Form đang hoạt động, khởi tạo bằng null
         private Form activeForm = null;
@@ -57,6 +57,46 @@ namespace Project1_Laundry
 
             // Hiển thị Form con
             childForm.Show();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Home());
+        }
+
+        private void btnEmployer_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Employee());
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Customer());
+        }
+
+        private void btnService_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Service());
+        }
+
+        private void btncash_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Cash(this));
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSetting_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

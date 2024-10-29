@@ -10,197 +10,192 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Policy;
 using System.Drawing.Drawing2D;
+using Project1_Laundry.Models;
+using System.Xml.Linq;
+using TheArtOfDevHtmlRenderer.Adapters;
 
 namespace Project1_Laundry
 {
     public partial class EmployeeModule : Form
     {
-        // Khai báo các đối tượng kết nối và câu lệnh SQL
-        SqlCommand cm = new SqlCommand();
-        dbConnect dbcon = new dbConnect();
-        string title = "Hệ Thống Quản Lý Tiệm Sửa Chữa Đồ Gia Dụng"; // Tiêu đề hệ thống
-        bool kiemTra = false; // Biến để kiểm tra dữ liệu đầu vào
-        Employer employer; // Đối tượng Employer để kết nối với form chính
 
-        // Hàm khởi tạo với tham số Employer
-        public EmployeeModule(Employer emp)
+
+        private readonly LaundryContextDB context;
+        bool check = false;
+        string title = "Laundry Shop";
+        Employee employee;
+        public EmployeeModule(Employee employeeForm)
         {
             InitializeComponent();
-            employer = emp; // Gán đối tượng Employer
-            cbRole.SelectedIndex = 3; // Chọn mặc định "Công nhân" trong ComboBox
+            context = new LaundryContextDB(); // Khởi tạo DbContext
+            employee = employeeForm; // Tham chiếu đến form Employer
+            cbRole.SelectedIndex = 3; // Mặc định chọn Worker
         }
 
-        // Sự kiện đóng form khi nhấn nút đóng
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
+   
 
-        // Sự kiện khi nhấn nút Lưu (Thêm nhân viên vào cơ sở dữ liệu)
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
-                kiemTraDuLieu(); // Kiểm tra các trường dữ liệu
-                if (kiemTra)
+                checkField(); // Kiểm tra dữ liệu
+                if (check)
                 {
-                    // Xác nhận nếu người dùng muốn thêm nhân viên mới
-                    if (MessageBox.Show("Bạn có chắc chắn muốn đăng ký nhân viên này không?", "Đăng ký nhân viên", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Bạn có chắc chắn rặng bạn muốn đăng kí nhân viên này?",
+                        "Employer Registration", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        // Câu truy vấn thêm dữ liệu nhân viên vào bảng tbEmployer
-                        cm = new SqlCommand("INSERT INTO tbEmployer(ten,dienthoai,diachi,ngaysinh,gioitinh,vaitro,luong,matkhau)VALUES(@ten,@dienthoai,@diachi,@ngaysinh,@gioitinh,@vaitro,@luong,@matkhau)", dbcon.connect());
-                        cm.Parameters.AddWithValue("@ten", txtName.Text);
-                        cm.Parameters.AddWithValue("@dienthoai", txtPhone.Text);
-                        cm.Parameters.AddWithValue("@diachi", txtAddress.Text);
-                        cm.Parameters.AddWithValue("@ngaysinh", dtDob.Value);
-                        cm.Parameters.AddWithValue("@gioitinh", rdMale.Checked ? "Nam" : "Nữ"); // Kiểm tra giới tính
-                        cm.Parameters.AddWithValue("@vaitro", cbRole.Text);
-                        cm.Parameters.AddWithValue("@luong", txtSalary.Text);
-                        cm.Parameters.AddWithValue("@matkhau", txtPassword.Text);
+                        var newEmployer = new tbEmployee
+                        {
+                            name = txtName.Text,
+                            phone = int.Parse(txtPhone.Text),
+                            address = txtAddress.Text,
+                            dob = dtDob.Value,
+                            gender = rdMale.Checked ? "Nam" : "Nữ",
+                            role = cbRole.Text,
+                            salary = txtSalary.Text,
+                            password = txtPassword.Text
+                        };
 
-                        // Mở kết nối và thực thi câu truy vấn
-                        dbcon.open();
-                        cm.ExecuteNonQuery();
-                        dbcon.close();
+                        context.tbEmployees.Add(newEmployer); // Thêm vào DbSet
+                        context.SaveChanges(); // Lưu vào CSDL
 
-                        // Thông báo khi lưu thành công
-                        MessageBox.Show("Nhân viên đã được đăng ký thành công!", title);
-                        kiemTra = false; // Reset biến kiểm tra
-                        XoaForm(); // Xóa dữ liệu trong các ô sau khi lưu
-                        employer.loadEmployer(); // Cập nhật danh sách nhân viên trên form chính
+                        MessageBox.Show("Nhân viên đã được đăng kí thành công!", title);
+
+                        Clear(); // Xóa các trường dữ liệu
+                        employee.loadEmployee(); // Tải lại danh sách employer
                     }
                 }
             }
             catch (Exception ex)
             {
-                // Hiển thị lỗi nếu có vấn đề xảy ra
-                MessageBox.Show(ex.Message, title);
+                MessageBox.Show($"Error: {ex.Message}", title, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        // Sự kiện khi nhấn nút Cập nhật (Cập nhật thông tin nhân viên)
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
             {
-                kiemTraDuLieu(); // Kiểm tra dữ liệu trước khi cập nhật
-                if (kiemTra)
+                checkField(); // Kiểm tra dữ liệu
+                if (check)
                 {
-                    // Xác nhận nếu người dùng muốn cập nhật thông tin nhân viên
-                    if (MessageBox.Show("Bạn có chắc chắn muốn chỉnh sửa thông tin này không?", "Chỉnh sửa nhân viên", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Bạn có chắn rằng muốn thay đổi dòng dự liệu này không?",
+                        "Employer Editing", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        // Câu truy vấn cập nhật thông tin nhân viên trong cơ sở dữ liệu
-                        cm = new SqlCommand("UPDATE tbEmployer SET ten=@ten, dienthoai=@dienthoai, diachi=@diachi, ngaysinh=@ngaysinh, gioitinh=@gioitinh, vaitro=@vaitro, luong=@luong, matkhau=@matkhau WHERE id=@id", dbcon.connect());
-                        cm.Parameters.AddWithValue("@id", lblEid.Text);
-                        cm.Parameters.AddWithValue("@ten", txtName.Text);
-                        cm.Parameters.AddWithValue("@dienthoai", txtPhone.Text);
-                        cm.Parameters.AddWithValue("@diachi", txtAddress.Text);
-                        cm.Parameters.AddWithValue("@ngaysinh", dtDob.Value);
-                        cm.Parameters.AddWithValue("@gioitinh", rdMale.Checked ? "Nam" : "Nữ"); // Kiểm tra giới tính
-                        cm.Parameters.AddWithValue("@vaitro", cbRole.Text);
-                        cm.Parameters.AddWithValue("@luong", txtSalary.Text);
-                        cm.Parameters.AddWithValue("@matkhau", txtPassword.Text);
+                        if (int.TryParse(lblEid.Text, out int employerId))
+                        {
+                            var employer = context.tbEmployees.Find(employerId);
+                            if (employer != null)
+                            {
+                                employer.name = txtName.Text;
+                                employer.phone = int.Parse(txtPhone.Text);
+                                employer.address = txtAddress.Text;
+                                employer.dob = dtDob.Value;
+                                employer.gender = rdMale.Checked ? "Nam" : "Nữ";
+                                employer.role = cbRole.Text;
+                                employer.salary = txtSalary.Text;
+                                employer.password = txtPassword.Text;
 
-                        // Mở kết nối và thực thi câu truy vấn
-                        dbcon.open();
-                        cm.ExecuteNonQuery();
-                        dbcon.close();
+                                context.SaveChanges(); // Lưu thay đổi
 
-                        // Thông báo khi cập nhật thành công
-                        MessageBox.Show("Thông tin nhân viên đã được cập nhật thành công!", title);
-                        XoaForm(); // Xóa dữ liệu sau khi cập nhật
-                        this.Dispose(); // Đóng form sau khi cập nhật
-                        employer.loadEmployer(); // Cập nhật danh sách nhân viên trên form chính
+                                MessageBox.Show("Nhân viên đã được cập nhật thành công!", title);
+
+                                Clear(); // Xóa các trường dữ liệu
+                                employee.loadEmployee(); // Tải lại danh sách employer
+                                this.Dispose(); // Đóng form
+                            }
+                            else
+                            {
+                                MessageBox.Show("Không tìm thấy nhân viên!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
                     }
                 }
             }
             catch (Exception ex)
             {
-                // Hiển thị lỗi nếu có vấn đề xảy ra
-                MessageBox.Show(ex.Message, title);
+                MessageBox.Show($"Error: {ex.Message}", title, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        // Sự kiện khi nhấn nút Hủy (Xóa form)
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            XoaForm(); // Xóa sạch các trường dữ liệu
-            btnUpdate.Enabled = false; // Vô hiệu hóa nút Cập nhật
-            btnSave.Enabled = true; // Kích hoạt nút Lưu
+            Clear(); // Xóa dữ liệu và đặt lại form
+            btnUpdate.Enabled = false;
+            btnSave.Enabled = true;
         }
 
-        // Kiểm soát đầu vào trong ô lương (chỉ cho phép nhập số)
+        public void Clear()
+        {
+            txtName.Clear();
+            txtPhone.Clear();
+            txtAddress.Clear();
+            txtSalary.Clear();
+            txtPassword.Clear();
+            dtDob.Value = DateTime.Now; 
+            cbRole.SelectedIndex = 3; 
+        }
+
+        public void checkField()
+        {
+            if (string.IsNullOrEmpty(txtName.Text) ||
+                string.IsNullOrEmpty(txtPhone.Text) ||
+                string.IsNullOrEmpty(txtAddress.Text) ||
+                string.IsNullOrEmpty(txtSalary.Text))
+            {
+                MessageBox.Show("Bạn vui lòng nhập đầy đủ thông tin!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                check = false;
+                return;
+            }
+
+            if (checkAge(dtDob.Value) < 18)
+            {
+                MessageBox.Show("Nhân viên dưới 18 tuổi!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                check = false;
+                return;
+            }
+
+            check = true;
+        }
+
+        private static int checkAge(DateTime dateOfBirth)
+        {
+            int age = DateTime.Now.Year - dateOfBirth.Year;
+            if (DateTime.Now.DayOfYear < dateOfBirth.DayOfYear)
+                age--; // Trừ 1 nếu chưa đến ngày sinh nhật trong năm nay
+            return age;
+        }
+
         private void txtSalary_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Chỉ cho phép nhập số và dấu chấm
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
-                e.Handled = true; // Không cho phép nhập
+                e.Handled = true;
             }
-           
         }
 
-
-        // Hàm để xóa sạch các trường dữ liệu trong form
-        #region method
-        public void XoaForm()
+        private void btnClose_Click_1(object sender, EventArgs e)
         {
-            txtAddress.Clear();
-            txtName.Clear();
-            txtPassword.Clear();
-            txtPhone.Clear();
-            txtSalary.Clear();
-            dtDob.Value = DateTime.Now; // Đặt lại giá trị ngày sinh về ngày hiện tại
-            cbRole.SelectedIndex = 3; // Chọn mặc định "Công nhân"
+            this.Dispose();
         }
 
-        // Hàm kiểm tra các trường dữ liệu và ngày sinh
-        public void kiemTraDuLieu()
-        {
-            // Kiểm tra nếu các trường bắt buộc chưa được điền
-            if (txtAddress.Text == "" || txtName.Text == "" || txtPhone.Text == "" || txtSalary.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập đủ các trường dữ liệu!", "Cảnh báo");
-                return; // Dừng lại và quay lại form để người dùng nhập dữ liệu
-            }
-
-            // Kiểm tra nếu nhân viên dưới 18 tuổi
-            if (kiemTraTuoi(dtDob.Value) < 18)
-            {
-                MessageBox.Show("Nhân viên chưa đủ 18 tuổi!", "Cảnh báo");
-                return;
-            }
-            kiemTra = true; // Đánh dấu kiểm tra thành công
-        }
-
-        // Hàm kiểm tra tuổi (tính nếu dưới 18 tuổi)
-        private static int kiemTraTuoi(DateTime ngaysinh)
-        {
-            int tuoi = DateTime.Now.Year - ngaysinh.Year;
-            if (DateTime.Now.DayOfYear < ngaysinh.DayOfYear)
-                tuoi = tuoi - 1; // Trừ thêm 1 năm nếu chưa qua ngày sinh trong năm hiện tại
-            return tuoi;
-        }
-
-        #endregion method
-
-        private void cbRole_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbRole.Text == "Quản Lý")
-            {
-                this.Height = 453 - 27;
-                txtPassword.Clear();
-                lblPass.Visible = false; // hide password
-                txtPassword.Visible = false;
-            }
-            else
-            {
-                lblPass.Visible = true;
-                txtPassword.Visible = true;
-                this.Height = 453;
-            }
-        }
-
-        
+        //private void cbRole_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (cbRole.Text == "Quản lí")
+        //    {
+        //        this.Height = 427;
+        //        lblPass.Visible = false;
+        //        txtPassword.Visible = false;
+        //        txtPassword.Clear();
+        //    }
+        //    else
+        //    {
+        //        lblPass.Visible = true;
+        //        txtPassword.Visible = true;
+        //        this.Height = 453;
+        //    }
+        //}
     }
 }
+
