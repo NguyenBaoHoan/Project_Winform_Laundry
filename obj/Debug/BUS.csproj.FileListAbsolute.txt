@@ -97,3 +97,6 @@ D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\LiveCharts.WinForms.xml
 D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\LiveCharts.Wpf.pdb
 D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\LiveCharts.Wpf.xml
 D:\PROGRAMING\C#\Project1_Laundry\obj\Debug\Project1_Laundry.Employee.resources
+D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\Receipt.resx
+D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\Receipt.cs
+D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\Receipt.Designer.cs

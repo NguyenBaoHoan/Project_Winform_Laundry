@@ -25,10 +25,6 @@ namespace Project1_Laundry
             context = new LaundryContextDB();  // Khởi tạo DbContext
         }
 
-
-
-        
-
         public void LoadCustomerData(List<tbCustomer> customers)
         {
             dgvCustomer.Rows.Clear();  // Xóa dữ liệu cũ trong DataGridView

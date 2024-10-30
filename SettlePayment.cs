@@ -69,10 +69,11 @@ namespace Project1_Laundry
 
                     context.SaveChanges(); // Lưu các thay đổi vào cơ sở dữ liệu
 
-                    // Hiển thị biên lai
-                    //Receipt module = new Receipt(cash);
-                    //module.loadReceipt(txtCash.Text, txtChange.Text);
-                    //module.ShowDialog();
+                    //Hiển thị biên lai
+                    Receipt module = new Receipt(cash);
+                    module.LoadReceipt(txtCash.Text, txtChange.Text);
+                    module.ShowDialog();
+
 
                     MessageBox.Show("Thanh toán đã lưu thành công!", "Thành Toán", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     cash.loadCash();

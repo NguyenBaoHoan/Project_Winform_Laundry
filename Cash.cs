@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -71,17 +72,25 @@ namespace Project1_Laundry
 
         private void btnCash_Click(object sender, EventArgs e)
         {
+            if (double.Parse(lblTotal.Text) == 0)
+            {
+                DialogResult res = MessageBox.Show("Hiện tại chưa có dữ liệu nào bạn có chắc rằng muốn thanh toán!", "Information", MessageBoxButtons.YesNo);
+                if (res == DialogResult.No)
+                {
+                    return;
+                }
+            }
             
-                PaymentMethod paymentMethod = new PaymentMethod(this);
-                paymentMethod.ShowDialog();
-            
+            PaymentMethod paymentMethod = new PaymentMethod(this);
+            paymentMethod.ShowDialog();
+
             //SettlePayment module = new SettlePayment(this);
             //module.txtSale.Text = lblTotal.Text;
             //module.ShowDialog();
 
+
         }
 
-        
 
         // create 1 hàm lấy số thứ tự dựa vào ngày 
         public void getTransno()
