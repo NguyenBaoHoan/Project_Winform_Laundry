@@ -271,6 +271,7 @@
             this.txtSale.Size = new System.Drawing.Size(256, 33);
             this.txtSale.TabIndex = 19;
             this.txtSale.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtSale.TextChanged += new System.EventHandler(this.txtSale_TextChanged);
             // 
             // picClose
             // 

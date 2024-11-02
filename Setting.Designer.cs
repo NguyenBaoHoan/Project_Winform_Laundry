@@ -64,6 +64,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtComName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvType)).BeginInit();
@@ -72,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCostofGoodSold)).BeginInit();
             this.panel3.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -386,11 +388,12 @@
             this.tabPage3.Controls.Add(this.label4);
             this.tabPage3.Controls.Add(this.txtComName);
             this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Controls.Add(this.pictureBox1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(943, 390);
+            this.tabPage3.Size = new System.Drawing.Size(943, 383);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Thông Tin Công Ty";
+            this.tabPage3.Text = "Thông Tin Cửa Hàng";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // btnCancel
@@ -399,8 +402,9 @@
             this.btnCancel.BackColor = System.Drawing.Color.Red;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(718, 198);
+            this.btnCancel.Location = new System.Drawing.Point(718, 201);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(140, 41);
             this.btnCancel.TabIndex = 26;
@@ -414,8 +418,9 @@
             this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(536, 198);
+            this.btnSave.Location = new System.Drawing.Point(536, 201);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(140, 41);
             this.btnSave.TabIndex = 27;
@@ -425,6 +430,7 @@
             // 
             // txtComAddress
             // 
+            this.txtComAddress.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComAddress.Location = new System.Drawing.Point(232, 162);
             this.txtComAddress.Name = "txtComAddress";
             this.txtComAddress.Size = new System.Drawing.Size(626, 26);
@@ -433,14 +439,16 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(72, 165);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 20);
+            this.label4.Size = new System.Drawing.Size(119, 18);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Địa Chỉ Công Ty :";
+            this.label4.Text = "Địa Cửa Hàng :";
             // 
             // txtComName
             // 
+            this.txtComName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComName.Location = new System.Drawing.Point(232, 116);
             this.txtComName.Name = "txtComName";
             this.txtComName.Size = new System.Drawing.Size(626, 26);
@@ -449,11 +457,21 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(72, 119);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 20);
+            this.label3.Size = new System.Drawing.Size(119, 18);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Tên Công Ty :";
+            this.label3.Text = "Tên Cửa Hàng :";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(943, 383);
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
             // 
             // Setting
             // 
@@ -476,6 +494,7 @@
             this.panel3.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -514,5 +533,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewImageColumn EditCoG;
         private System.Windows.Forms.DataGridViewImageColumn DeleteCoG;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

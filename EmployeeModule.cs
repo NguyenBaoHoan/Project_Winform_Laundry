@@ -29,7 +29,10 @@ namespace Project1_Laundry
             InitializeComponent();
             context = new LaundryContextDB(); // Khởi tạo DbContext
             employee = employeeForm; // Tham chiếu đến form Employer
-            cbRole.SelectedIndex = 3; // Mặc định chọn Worker
+            if (cbRole.Items.Count > 1)
+                cbRole.SelectedIndex = 1; // Default to Worker if index 1 exists
+            else
+                cbRole.SelectedIndex = -1; // Deselect if there are not enough items
         }
 
    
@@ -133,7 +136,7 @@ namespace Project1_Laundry
             txtSalary.Clear();
             txtPassword.Clear();
             dtDob.Value = DateTime.Now; 
-            cbRole.SelectedIndex = 3; 
+            cbRole.SelectedIndex = 0; 
         }
 
         public void checkField()
@@ -180,22 +183,7 @@ namespace Project1_Laundry
             this.Dispose();
         }
 
-        //private void cbRole_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    if (cbRole.Text == "Quản lí")
-        //    {
-        //        this.Height = 427;
-        //        lblPass.Visible = false;
-        //        txtPassword.Visible = false;
-        //        txtPassword.Clear();
-        //    }
-        //    else
-        //    {
-        //        lblPass.Visible = true;
-        //        txtPassword.Visible = true;
-        //        this.Height = 453;
-        //    }
-        //}
+       
     }
 }
 

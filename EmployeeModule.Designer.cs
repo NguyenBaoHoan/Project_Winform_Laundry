@@ -290,11 +290,7 @@
             this.cbRole.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbRole.FormattingEnabled = true;
             this.cbRole.Items.AddRange(new object[] {
-            "Nhân viên giặc",
-            "Nhân viên ủi sấy",
-            "Nhân viên kiểm tra",
-            "Nhân viên giao hàng",
-            "Kế Toán",
+            "Nhân viên ",
             "Quản Lý"});
             this.cbRole.Location = new System.Drawing.Point(266, 243);
             this.cbRole.Name = "cbRole";

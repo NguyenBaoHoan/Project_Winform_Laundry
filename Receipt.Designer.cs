@@ -47,6 +47,7 @@
             this.ClientSize = new System.Drawing.Size(360, 495);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Receipt";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Receipt";
             this.Load += new System.EventHandler(this.Receipt_Load);
             this.ResumeLayout(false);

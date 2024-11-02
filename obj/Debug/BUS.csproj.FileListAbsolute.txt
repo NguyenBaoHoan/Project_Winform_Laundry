@@ -100,3 +100,8 @@ D:\PROGRAMING\C#\Project1_Laundry\obj\Debug\Project1_Laundry.Employee.resources
 D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\Receipt.resx
 D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\Receipt.cs
 D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\Receipt.Designer.cs
+D:\PROGRAMING\C#\Project1_Laundry\obj\Debug\Project1_Laundry.CreateQRMoMo.resources
+D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\zxing.dll
+D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\zxing.presentation.dll
+D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\zxing.xml
+D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\zxing.presentation.xml

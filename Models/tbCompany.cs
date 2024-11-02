@@ -9,7 +9,9 @@ namespace Project1_Laundry.Models
     [Table("tbCompany")]
     public partial class tbCompany
     {
-        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int id { get; set; }
+
         [StringLength(50)]
         public string name { get; set; }
 

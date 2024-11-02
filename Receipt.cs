@@ -41,44 +41,43 @@ namespace Project1_Laundry
                 this.reportViewer1.LocalReport.ReportPath = Application.StartupPath + @"\Reports\Report1.rdlc";
                 this.reportViewer1.LocalReport.DataSources.Clear();
 
-                // Khởi tạo context để làm việc với Entity Framework
-                    // Truy vấn dữ liệu từ bảng tbCash và tbService
-                    var receiptData = context.tbCashes
-                        .Where(c => c.transno == cash.lblTransno.Text)
-                        .Select(c => new
-                        {
-                            ServiceName = c.tbService.name,
-                            Price = c.price
-                        })
-                        .ToList();
-
-                    // Chuyển dữ liệu truy vấn thành DataTable cho ReportViewer
-                    DataTable dtReceipt = new DataTable();
-                    dtReceipt.Columns.Add("name", typeof(string));
-                    dtReceipt.Columns.Add("price", typeof(string));
-
-                    foreach (var item in receiptData)
+                // Truy vấn dữ liệu từ bảng tbCash và tbService
+                var receiptData = context.tbCashes
+                    .Where(c => c.transno == cash.lblTransno.Text)
+                    .Select(c => new
                     {
-                        dtReceipt.Rows.Add(item.ServiceName, item.Price);
-                    }
+                        ServiceName = c.tbService.name,
+                        Price = c.price
+                    })
+                    .ToList();
 
-                    // Đặt các tham số cho báo cáo
-                    ReportParameter tienHoanTra = new ReportParameter("tienHoanTra", pchange);
-                    ReportParameter tienMat = new ReportParameter("tienMat", pcash);
-                    ReportParameter phaiThanhToan = new ReportParameter("phaiThanhToan", cash.lblTotal.Text);
-                    ReportParameter giaoDich = new ReportParameter("giaoDich", cash.lblTransno.Text);
+                // Chuyển dữ liệu truy vấn thành DataTable cho ReportViewer
+                DataTable dtReceipt = new DataTable();
+                dtReceipt.Columns.Add("name", typeof(string));
+                dtReceipt.Columns.Add("price", typeof(string));
 
-                    // Thêm tham số vào ReportViewer
-                    reportViewer1.LocalReport.SetParameters(new[] { tienHoanTra, tienMat, phaiThanhToan, giaoDich });
+                foreach (var item in receiptData)
+                {
+                    dtReceipt.Rows.Add(item.ServiceName, item.Price);
+                }
 
-                    // Thêm nguồn dữ liệu vào ReportViewer
-                    ReportDataSource rptDataSource = new ReportDataSource("DataSet1", dtReceipt);
-                    reportViewer1.LocalReport.DataSources.Add(rptDataSource);
+                // Đặt các tham số cho báo cáo
+                ReportParameter tienHoanTra = new ReportParameter("tienHoanTra", pchange);
+                ReportParameter tienMat = new ReportParameter("tienMat", pcash);
+                ReportParameter phaiThanhToan = new ReportParameter("phaiThanhToan", cash.lblTotal.Text);
+                ReportParameter giaoDich = new ReportParameter("giaoDich", cash.lblTransno.Text);
 
-                    // Cài đặt chế độ hiển thị của ReportViewer
-                    reportViewer1.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
-                    reportViewer1.ZoomMode = ZoomMode.FullPage;
-                    reportViewer1.ZoomPercent = 30;
+                // Thêm tham số vào ReportViewer
+                reportViewer1.LocalReport.SetParameters(new[] { tienHoanTra, tienMat, phaiThanhToan, giaoDich });
+
+                // Thêm nguồn dữ liệu vào ReportViewer
+                ReportDataSource rptDataSource = new ReportDataSource("DataSet1", dtReceipt);
+                reportViewer1.LocalReport.DataSources.Add(rptDataSource);
+
+                // Cài đặt chế độ hiển thị của ReportViewer
+                reportViewer1.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
+                reportViewer1.ZoomMode = ZoomMode.FullPage;
+                reportViewer1.ZoomPercent = 30;
                 
             }
             catch (Exception ex)

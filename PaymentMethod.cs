@@ -20,18 +20,33 @@ namespace Project1_Laundry
             cashForm = cash;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        
+        
+
+        private void guna2Button2_Click(object sender, EventArgs e)
         {
             // Hiển thị form thanh toán bằng tiền mặt
             SettlePayment settlePayment = new SettlePayment(cashForm);
             settlePayment.txtSale.Text = cashForm.lblTotal.Text;
             settlePayment.ShowDialog();
-            this.Close(); // Đóng form PaymentMethod sau khi hiển thị SettlePayment
+            this.Dispose(); // Đóng form PaymentMethod sau khi hiển thị SettlePayment
         }
-        private void btnCard_Click(object sender, EventArgs e)
+
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
-            // Thêm logic thanh toán qua thẻ ở đây
-            MessageBox.Show("Thanh toán bằng thẻ chưa được hỗ trợ.");
+            CreateQRMoMo createQRMoMo = new CreateQRMoMo(cashForm);
+            createQRMoMo.txtsotien.Text = RemoveDots(cashForm.lblTotal.Text);
+            createQRMoMo.ShowDialog();
+            this.Dispose();
+        }
+        private string RemoveDots(string input)
+        {
+            return input.Replace(".", "");
+        }
+
+        private void picClose_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

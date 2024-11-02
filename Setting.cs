@@ -158,7 +158,6 @@ namespace Project1_Laundry
                     {
                         company.name = txtComName.Text;
                         company.address = txtComAddress.Text;
-                        context.Entry(company).State = EntityState.Modified;
                     }
                     else
                     {
@@ -275,5 +274,7 @@ namespace Project1_Laundry
         }
 
         #endregion
+
+        
     }
 }

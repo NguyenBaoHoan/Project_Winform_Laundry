@@ -144,7 +144,8 @@ namespace Project1_Laundry
                         Class = c.tbType._class,
                         ServiceName = c.tbService.name,
                         Price = c.price,
-                        Date = c.date
+                        Date = c.date,
+                        Point =  c.tbCustomer.points
                     })
                     .ToList();
 
@@ -152,7 +153,15 @@ namespace Project1_Laundry
                 foreach (var cash in cashList)
                 {
                     i++;
-                    price = double.Parse(cash.Class) * double.Parse(cash.Price);
+                    if(cash.Point > 5)
+                    {
+                        price = (double.Parse(cash.Price) * 0.95);
+                    }
+                    else
+                    {
+                        price = double.Parse(cash.Price);
+                    }    
+                    
 
                     dgvCash.Rows.Add(
                         i,
@@ -172,7 +181,7 @@ namespace Project1_Laundry
                     no = cash.No;
                     model = cash.Model;
                 }
-
+                
                 lblTotal.Text = total.ToString("#,##0.000");
             }
             catch (Exception ex)

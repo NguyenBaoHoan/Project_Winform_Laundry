@@ -14,12 +14,12 @@ namespace Project1_Laundry.Models
 
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<tbCash> tbCashes { get; set; }
+        public virtual DbSet<tbCompany> tbCompanies { get; set; }
         public virtual DbSet<tbCostofGood> tbCostofGoods { get; set; }
         public virtual DbSet<tbCustomer> tbCustomers { get; set; }
         public virtual DbSet<tbEmployee> tbEmployees { get; set; }
         public virtual DbSet<tbService> tbServices { get; set; }
         public virtual DbSet<tbType> tbTypes { get; set; }
-        public virtual DbSet<tbCompany> tbCompanies { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

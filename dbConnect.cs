@@ -19,16 +19,19 @@ namespace Project1_Laundry
         {
             return cn;
         }
+
         public void open()
         {
             if (cn.State == System.Data.ConnectionState.Closed)
                 cn.Open();
         }
+
         public void close()
         {
             if (cn.State == System.Data.ConnectionState.Open)
                 cn.Close();
         }
+
         public void executeQuery(string sql)
         {
             try
@@ -43,5 +46,6 @@ namespace Project1_Laundry
                 MessageBox.Show(ex.Message);
             }
         }
+
     }
 }

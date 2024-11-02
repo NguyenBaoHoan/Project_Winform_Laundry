@@ -80,6 +80,15 @@ namespace Project1_Laundry
                 module.dtDob.Text = dgvEmployee.Rows[e.RowIndex].Cells[5].Value.ToString();
                 module.rdMale.Checked = dgvEmployee.Rows[e.RowIndex].Cells[6].Value.ToString() == "Male";
                 module.cbRole.Text = dgvEmployee.Rows[e.RowIndex].Cells[7].Value.ToString();
+                string role = dgvEmployee.Rows[e.RowIndex].Cells[7].Value.ToString();
+                if (module.cbRole.Items.Contains(role))
+                {
+                    module.cbRole.Text = role;
+                }
+                else
+                {
+                    module.cbRole.SelectedIndex = -1; // Deselect if role not found
+                }
                 module.txtSalary.Text = dgvEmployee.Rows[e.RowIndex].Cells[8].Value.ToString();
                 module.txtPassword.Text = dgvEmployee.Rows[e.RowIndex].Cells[9].Value.ToString();
 

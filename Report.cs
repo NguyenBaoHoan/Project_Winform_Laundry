@@ -116,11 +116,11 @@ namespace Project1_Laundry
                     foreach (var item in revenus)
                     {
                         i++;
-                        dgvRevenus.Rows.Add(i, item.Date.ToShortDateString(), item.Total.ToString("#,##0.000"));
+                        dgvRevenus.Rows.Add(i, item.Date.ToShortDateString(), item.Total.ToString("#,##0,000"));
                         total += item.Total;
                     }
 
-                    lblRevenus.Text = total.ToString("#,##0.000");
+                    lblRevenus.Text = total.ToString("#,##,000");
                 }
             }
             catch (Exception ex)
@@ -188,8 +188,9 @@ namespace Project1_Laundry
             }
         }
 
+
         #endregion LoadChiPhi
 
-
+        
     }
 }
