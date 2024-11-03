@@ -13,11 +13,45 @@ namespace Project1_Laundry
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        private bool isAdmin;
+        public MainForm(bool isAdmin)
         {
             InitializeComponent();
+            this.isAdmin = isAdmin; 
             openChildForm(new Home());
+            // Hạn chế quyền truy cập
+            RestrictAccess();
         }
+
+        /// <summary>
+        /// Trần Nhật Anh - Phân quyền truy cập đối với tk Quản lý và Nhân viên 
+        /// </summary>
+        // Phương thức để hạn chế quyền truy cập dựa trên vai trò
+        private void RestrictAccess()
+        {
+            if (!isAdmin)
+            {
+                btnEmployer.Visible = false;
+                btnReport.Visible = false;
+                btnSetting.Visible = false;
+                btnHome.Visible = false; // Nếu bạn không muốn cho nhân viên truy cập
+                btnCustomer.Visible = true;
+                btnService.Visible = true;
+                btncash.Visible = true;
+                guna2Button5.Visible = true; // Nếu cần
+            }
+            else
+            {
+                btnEmployer.Visible = true;
+                btnReport.Visible = true;
+                btnSetting.Visible = true;
+                btnCustomer.Visible = true;
+                btnService.Visible = true;
+                btncash.Visible = true;
+                guna2Button5.Visible = true;
+            }
+        }
+
         internal void loadGrossProfit()
         {
             throw new NotImplementedException();

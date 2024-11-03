@@ -20,6 +20,8 @@ namespace Project1_Laundry.Models
         [StringLength(50)]
         public string address { get; set; }
 
+        public byte[] Image { get; set; }
+
         [Column(TypeName = "date")]
         public DateTime? dob { get; set; }
 
@@ -34,5 +36,7 @@ namespace Project1_Laundry.Models
 
         [StringLength(50)]
         public string password { get; set; }
+
+        public bool? isAdmin { get; set; }
     }
 }

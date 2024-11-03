@@ -51,8 +51,11 @@ namespace Project1_Laundry
                     MessageBox.Show("Chào mừng " + employer.name + " ", "Bạn đã đăng nhập thành công!",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                    // Kiểm tra quyền admin từ cột isAdmin
+                    bool isAdmin = employer.isAdmin.HasValue && employer.isAdmin.Value;
+
                     this.Hide();
-                    MainForm main = new MainForm();
+                    MainForm main = new MainForm(isAdmin);  // Truyền quyền admin vào MainForm
                     main.ShowDialog();
                 }
                 else

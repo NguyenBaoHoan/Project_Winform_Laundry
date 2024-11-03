@@ -8,7 +8,7 @@ namespace Project1_Laundry.Models
     public partial class LaundryContextDB : DbContext
     {
         public LaundryContextDB()
-            : base("name=LaundryContextDB")
+            : base("name=LaundryContext")
         {
         }
 

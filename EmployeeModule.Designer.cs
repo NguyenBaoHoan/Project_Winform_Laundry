@@ -53,6 +53,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cbRole = new System.Windows.Forms.ComboBox();
             this.lblEid = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnSelectPicture = new System.Windows.Forms.Button();
+            this.ptbEmployee = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbEmployee)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -87,7 +91,7 @@
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.Location = new System.Drawing.Point(652, 415);
+            this.btnCancel.Location = new System.Drawing.Point(665, 474);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(84, 44);
             this.btnCancel.TabIndex = 34;
@@ -105,7 +109,7 @@
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(470, 415);
+            this.btnUpdate.Location = new System.Drawing.Point(483, 474);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(126, 44);
             this.btnUpdate.TabIndex = 33;
@@ -123,7 +127,7 @@
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(334, 415);
+            this.btnSave.Location = new System.Drawing.Point(347, 474);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(86, 44);
             this.btnSave.TabIndex = 32;
@@ -136,7 +140,7 @@
             // 
             this.rdFemale.AutoSize = true;
             this.rdFemale.Checked = true;
-            this.rdFemale.Location = new System.Drawing.Point(666, 295);
+            this.rdFemale.Location = new System.Drawing.Point(665, 262);
             this.rdFemale.Name = "rdFemale";
             this.rdFemale.Size = new System.Drawing.Size(46, 24);
             this.rdFemale.TabIndex = 31;
@@ -147,7 +151,7 @@
             // rdMale
             // 
             this.rdMale.AutoSize = true;
-            this.rdMale.Location = new System.Drawing.Point(585, 295);
+            this.rdMale.Location = new System.Drawing.Point(584, 262);
             this.rdMale.Name = "rdMale";
             this.rdMale.Size = new System.Drawing.Size(61, 24);
             this.rdMale.TabIndex = 30;
@@ -157,7 +161,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(135, 163);
+            this.label8.Location = new System.Drawing.Point(135, 169);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(68, 20);
             this.label8.TabIndex = 29;
@@ -166,7 +170,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(466, 297);
+            this.label7.Location = new System.Drawing.Point(465, 264);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(75, 20);
             this.label7.TabIndex = 28;
@@ -174,7 +178,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(266, 345);
+            this.txtPassword.Location = new System.Drawing.Point(265, 312);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(544, 26);
@@ -182,7 +186,7 @@
             // 
             // txtSalary
             // 
-            this.txtSalary.Location = new System.Drawing.Point(266, 294);
+            this.txtSalary.Location = new System.Drawing.Point(265, 261);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(175, 26);
             this.txtSalary.TabIndex = 25;
@@ -193,7 +197,7 @@
             this.txtAddress.Location = new System.Drawing.Point(266, 160);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(544, 59);
+            this.txtAddress.Size = new System.Drawing.Size(544, 29);
             this.txtAddress.TabIndex = 24;
             // 
             // dtDob
@@ -215,7 +219,7 @@
             // lblPass
             // 
             this.lblPass.AutoSize = true;
-            this.lblPass.Location = new System.Drawing.Point(135, 348);
+            this.lblPass.Location = new System.Drawing.Point(134, 315);
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(84, 20);
             this.lblPass.TabIndex = 19;
@@ -224,7 +228,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(135, 297);
+            this.label6.Location = new System.Drawing.Point(134, 264);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 20);
             this.label6.TabIndex = 18;
@@ -233,7 +237,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(135, 251);
+            this.label5.Location = new System.Drawing.Point(134, 218);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 20);
             this.label5.TabIndex = 17;
@@ -292,7 +296,7 @@
             this.cbRole.Items.AddRange(new object[] {
             "Nhân viên ",
             "Quản Lý"});
-            this.cbRole.Location = new System.Drawing.Point(266, 243);
+            this.cbRole.Location = new System.Drawing.Point(265, 210);
             this.cbRole.Name = "cbRole";
             this.cbRole.Size = new System.Drawing.Size(544, 28);
             this.cbRole.TabIndex = 39;
@@ -301,17 +305,48 @@
             // 
             this.lblEid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEid.AutoSize = true;
-            this.lblEid.Location = new System.Drawing.Point(135, 427);
+            this.lblEid.Location = new System.Drawing.Point(134, 498);
             this.lblEid.Name = "lblEid";
             this.lblEid.Size = new System.Drawing.Size(30, 20);
             this.lblEid.TabIndex = 40;
             this.lblEid.Text = "Eid";
             this.lblEid.Visible = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(134, 386);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 20);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "Hình ảnh : ";
+            // 
+            // btnSelectPicture
+            // 
+            this.btnSelectPicture.Location = new System.Drawing.Point(427, 414);
+            this.btnSelectPicture.Name = "btnSelectPicture";
+            this.btnSelectPicture.Size = new System.Drawing.Size(92, 36);
+            this.btnSelectPicture.TabIndex = 46;
+            this.btnSelectPicture.Text = "Chọn ảnh";
+            this.btnSelectPicture.UseVisualStyleBackColor = true;
+            this.btnSelectPicture.Click += new System.EventHandler(this.btnSelectPicture_Click_1);
+            // 
+            // ptbEmployee
+            // 
+            this.ptbEmployee.Location = new System.Drawing.Point(266, 357);
+            this.ptbEmployee.Name = "ptbEmployee";
+            this.ptbEmployee.Size = new System.Drawing.Size(140, 93);
+            this.ptbEmployee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbEmployee.TabIndex = 47;
+            this.ptbEmployee.TabStop = false;
+            // 
             // EmployeeModule
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(967, 485);
+            this.ClientSize = new System.Drawing.Size(967, 553);
+            this.Controls.Add(this.ptbEmployee);
+            this.Controls.Add(this.btnSelectPicture);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblEid);
             this.Controls.Add(this.cbRole);
             this.Controls.Add(this.txtPhone);
@@ -341,6 +376,7 @@
             this.Name = "EmployeeModule";
             this.ShowInTaskbar = false;
             this.Text = " ";
+            ((System.ComponentModel.ISupportInitialize)(this.ptbEmployee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,5 +407,8 @@
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.ComboBox cbRole;
         public System.Windows.Forms.Label lblEid;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnSelectPicture;
+        public System.Windows.Forms.PictureBox ptbEmployee;
     }
 }

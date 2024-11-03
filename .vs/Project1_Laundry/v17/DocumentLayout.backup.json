@@ -3,72 +3,108 @@
   "WorkspaceRootPath": "D:\\PROGRAMING\\C#\\Project1_Laundry\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|d:\\programing\\c#\\project1_laundry\\models\\laundrycontextdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:models\\laundrycontextdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|d:\\programing\\c#\\project1_laundry\\models\\tbemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:models\\tbemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\employeemodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:employeemodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|d:\\programing\\c#\\project1_laundry\\employeemodule.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:employeemodule.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|d:\\programing\\c#\\project1_laundry\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\employeemodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:employeemodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|d:\\programing\\c#\\project1_laundry\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|d:\\programing\\c#\\project1_laundry\\cashservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:cashservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|d:\\programing\\c#\\project1_laundry\\models\\laundrycontextdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:models\\laundrycontextdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\customermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:customermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\cash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:cash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\cash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:cash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|d:\\programing\\c#\\project1_laundry\\cashcutomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:cashcutomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|d:\\programing\\c#\\project1_laundry\\costmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:costmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|d:\\programing\\c#\\project1_laundry\\createqrmomo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:createqrmomo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|d:\\programing\\c#\\project1_laundry\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\load.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:load.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|d:\\programing\\c#\\project1_laundry\\customerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:customerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|d:\\programing\\c#\\project1_laundry\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\settlepayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:settlepayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\customermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:customermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\customerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:customerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\cashcutomer.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:cashcutomer.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\employeemodule.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:employeemodule.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\cashservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:cashservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\cash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:cash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\cashcutomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:cashcutomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\costmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:costmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\createqrmomo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:createqrmomo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\dataset1.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
@@ -83,32 +119,16 @@
       "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\load.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:load.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\managetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:managetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|d:\\programing\\c#\\project1_laundry\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\receipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -129,10 +149,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\setting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:setting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\settlepayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:settlepayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\settlepayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -173,10 +189,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\dataset1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:dataset1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\customermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|solutionrelative:customermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0EE337E2-33D9-4485-850E-4DE0E8AF998A}|BUS.csproj|D:\\PROGRAMING\\C#\\Project1_Laundry\\customer.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -226,8 +238,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LaundryContextDB.cs",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Models\\LaundryContextDB.cs",
+              "RelativeDocumentMoniker": "Models\\LaundryContextDB.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Models\\LaundryContextDB.cs",
+              "RelativeToolTip": "Models\\LaundryContextDB.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T03:16:01.651Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -236,117 +261,14 @@
               "RelativeDocumentMoniker": "Employee.cs",
               "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Employee.cs",
               "RelativeToolTip": "Employee.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAwwIIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T02:39:32.098Z",
-              "IsPinned": true,
+              "WhenOpened": "2024-11-03T02:45:14.85Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EmployeeModule.cs",
-              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\EmployeeModule.cs",
-              "RelativeDocumentMoniker": "EmployeeModule.cs",
-              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\EmployeeModule.cs",
-              "RelativeToolTip": "EmployeeModule.cs",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAgwL0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T02:40:19.291Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "tbEmployee.cs",
-              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Models\\tbEmployee.cs",
-              "RelativeDocumentMoniker": "Models\\tbEmployee.cs",
-              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Models\\tbEmployee.cs",
-              "RelativeToolTip": "Models\\tbEmployee.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAUwCYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T04:53:36.119Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LaundryContextDB.cs",
-              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Models\\LaundryContextDB.cs",
-              "RelativeDocumentMoniker": "Models\\LaundryContextDB.cs",
-              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Models\\LaundryContextDB.cs",
-              "RelativeToolTip": "Models\\LaundryContextDB.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAIwDcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T04:38:54.455Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EmployeeModule.Designer.cs",
-              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\EmployeeModule.Designer.cs",
-              "RelativeDocumentMoniker": "EmployeeModule.Designer.cs",
-              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\EmployeeModule.Designer.cs",
-              "RelativeToolTip": "EmployeeModule.Designer.cs",
-              "ViewState": "AgIAABoBAAAAAAAAAAD4vyoBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T04:35:13.428Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Cash.cs",
-              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Cash.cs",
-              "RelativeDocumentMoniker": "Cash.cs",
-              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Cash.cs",
-              "RelativeToolTip": "Cash.cs",
-              "ViewState": "AgIAAKoAAAAAAAAAAAAAAKsAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T01:48:21.174Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Report.cs [Design]",
-              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Report.cs",
-              "RelativeDocumentMoniker": "Report.cs",
-              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Report.cs [Design]",
-              "RelativeToolTip": "Report.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T07:26:55.395Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CashService.cs [Design]",
-              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CashService.cs",
-              "RelativeDocumentMoniker": "CashService.cs",
-              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CashService.cs [Design]",
-              "RelativeToolTip": "CashService.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T04:05:20.974Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Cash.cs [Design]",
-              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Cash.cs",
-              "RelativeDocumentMoniker": "Cash.cs",
-              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Cash.cs [Design]",
-              "RelativeToolTip": "Cash.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T01:48:15.997Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Employee.cs [Design]",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Employee.cs",
               "RelativeDocumentMoniker": "Employee.cs",
@@ -358,140 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EmployeeModule.cs [Design]",
-              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\EmployeeModule.cs",
-              "RelativeDocumentMoniker": "EmployeeModule.cs",
-              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\EmployeeModule.cs [Design]",
-              "RelativeToolTip": "EmployeeModule.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T01:50:48.604Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CashCutomer.cs [Design]",
-              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CashCutomer.cs",
-              "RelativeDocumentMoniker": "CashCutomer.cs",
-              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CashCutomer.cs [Design]",
-              "RelativeToolTip": "CashCutomer.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T03:14:57.136Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CostManagement.cs [Design]",
-              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CostManagement.cs",
-              "RelativeDocumentMoniker": "CostManagement.cs",
-              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CostManagement.cs [Design]",
-              "RelativeToolTip": "CostManagement.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T04:05:18.125Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CreateQRMoMo.cs [Design]",
-              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CreateQRMoMo.cs",
-              "RelativeDocumentMoniker": "CreateQRMoMo.cs",
-              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CreateQRMoMo.cs [Design]",
-              "RelativeToolTip": "CreateQRMoMo.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T04:05:17.126Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CustomerButton.cs [Design]",
-              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CustomerButton.cs",
-              "RelativeDocumentMoniker": "CustomerButton.cs",
-              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CustomerButton.cs [Design]",
-              "RelativeToolTip": "CustomerButton.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T04:05:15.55Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "dbConnect.cs",
-              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\dbConnect.cs",
-              "RelativeDocumentMoniker": "dbConnect.cs",
-              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\dbConnect.cs",
-              "RelativeToolTip": "dbConnect.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwBAAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T03:51:53.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "DataSet1.xsd",
-              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\DataSet1.xsd",
-              "RelativeDocumentMoniker": "DataSet1.xsd",
-              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\DataSet1.xsd",
-              "RelativeToolTip": "DataSet1.xsd",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
-              "WhenOpened": "2024-10-30T15:38:23.011Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Customer.cs [Design]",
-              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Customer.cs",
-              "RelativeDocumentMoniker": "Customer.cs",
-              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Customer.cs [Design]",
-              "RelativeToolTip": "Customer.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T03:56:21.474Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Home.cs [Design]",
-              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Home.cs",
-              "RelativeDocumentMoniker": "Home.cs",
-              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Home.cs [Design]",
-              "RelativeToolTip": "Home.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T09:05:42.597Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Load.cs [Design]",
-              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Load.cs",
-              "RelativeDocumentMoniker": "Load.cs",
-              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Load.cs [Design]",
-              "RelativeToolTip": "Load.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T09:06:51.485Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CustomerModule.cs [Design]",
-              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CustomerModule.cs",
-              "RelativeDocumentMoniker": "CustomerModule.cs",
-              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CustomerModule.cs [Design]",
-              "RelativeToolTip": "CustomerModule.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T05:23:42.786Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 9,
               "Title": "LoginForm.cs [Design]",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\LoginForm.cs",
               "RelativeDocumentMoniker": "LoginForm.cs",
@@ -503,7 +292,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 1,
+              "Title": "EmployeeModule.cs [Design]",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\EmployeeModule.cs",
+              "RelativeDocumentMoniker": "EmployeeModule.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\EmployeeModule.cs [Design]*",
+              "RelativeToolTip": "EmployeeModule.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T01:50:48.604Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\MainForm.cs",
+              "RelativeToolTip": "MainForm.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T11:03:30.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployeeModule.cs",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\EmployeeModule.cs",
+              "RelativeDocumentMoniker": "EmployeeModule.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\EmployeeModule.cs*",
+              "RelativeToolTip": "EmployeeModule.cs*",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAiwDsAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T11:06:01.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Load.cs [Design]",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Load.cs",
+              "RelativeDocumentMoniker": "Load.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Load.cs [Design]",
+              "RelativeToolTip": "Load.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T09:06:51.485Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "MainForm.cs [Design]",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
@@ -515,19 +354,253 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Cash.cs",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Cash.cs",
+              "RelativeDocumentMoniker": "Cash.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Cash.cs",
+              "RelativeToolTip": "Cash.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T01:48:21.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomerModule.cs",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CustomerModule.cs",
+              "RelativeDocumentMoniker": "CustomerModule.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CustomerModule.cs",
+              "RelativeToolTip": "CustomerModule.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAMwBUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T09:53:49.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\LoginForm.cs",
+              "RelativeToolTip": "LoginForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T11:01:43.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAD4vxIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T15:18:10.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Customer.cs",
+              "RelativeDocumentMoniker": "Customer.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Customer.cs",
+              "RelativeToolTip": "Customer.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAgwIsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T10:18:42.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SettlePayment.cs [Design]",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\SettlePayment.cs",
+              "RelativeDocumentMoniker": "SettlePayment.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\SettlePayment.cs [Design]",
+              "RelativeToolTip": "SettlePayment.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T03:31:00.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CustomerModule.cs [Design]",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CustomerModule.cs",
+              "RelativeDocumentMoniker": "CustomerModule.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CustomerModule.cs [Design]",
+              "RelativeToolTip": "CustomerModule.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T05:23:42.786Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CustomerButton.cs [Design]",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CustomerButton.cs",
+              "RelativeDocumentMoniker": "CustomerButton.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CustomerButton.cs [Design]",
+              "RelativeToolTip": "CustomerButton.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T04:05:15.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Customer.cs [Design]",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Customer.cs",
+              "RelativeDocumentMoniker": "Customer.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Customer.cs [Design]",
+              "RelativeToolTip": "Customer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T03:56:21.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CashCutomer.Designer.cs",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CashCutomer.Designer.cs",
+              "RelativeDocumentMoniker": "CashCutomer.Designer.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CashCutomer.Designer.cs",
+              "RelativeToolTip": "CashCutomer.Designer.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAD4v94AAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T10:05:34.252Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "EmployeeModule.Designer.cs",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\EmployeeModule.Designer.cs",
+              "RelativeDocumentMoniker": "EmployeeModule.Designer.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\EmployeeModule.Designer.cs",
+              "RelativeToolTip": "EmployeeModule.Designer.cs",
+              "ViewState": "AgIAAEUBAAAAAAAAAAAkwFUBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T08:09:11.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Cash.cs [Design]",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Cash.cs",
+              "RelativeDocumentMoniker": "Cash.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Cash.cs [Design]",
+              "RelativeToolTip": "Cash.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T01:48:15.997Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CashService.cs [Design]",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CashService.cs",
+              "RelativeDocumentMoniker": "CashService.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CashService.cs [Design]",
+              "RelativeToolTip": "CashService.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T04:05:20.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Report.cs [Design]",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Report.cs",
+              "RelativeDocumentMoniker": "Report.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Report.cs [Design]",
+              "RelativeToolTip": "Report.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T07:26:55.395Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 23,
+              "Title": "CashCutomer.cs [Design]",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CashCutomer.cs",
+              "RelativeDocumentMoniker": "CashCutomer.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CashCutomer.cs [Design]",
+              "RelativeToolTip": "CashCutomer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T03:14:57.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CostManagement.cs [Design]",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CostManagement.cs",
+              "RelativeDocumentMoniker": "CostManagement.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CostManagement.cs [Design]",
+              "RelativeToolTip": "CostManagement.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T04:05:18.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CreateQRMoMo.cs [Design]",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CreateQRMoMo.cs",
+              "RelativeDocumentMoniker": "CreateQRMoMo.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CreateQRMoMo.cs [Design]",
+              "RelativeToolTip": "CreateQRMoMo.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T04:05:17.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "dbConnect.cs",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\dbConnect.cs",
+              "RelativeDocumentMoniker": "dbConnect.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\dbConnect.cs",
+              "RelativeToolTip": "dbConnect.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwBAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T03:51:53.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "DataSet1.xsd",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\DataSet1.xsd",
+              "RelativeDocumentMoniker": "DataSet1.xsd",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\DataSet1.xsd",
+              "RelativeToolTip": "DataSet1.xsd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
+              "WhenOpened": "2024-10-30T15:38:23.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Home.cs [Design]",
+              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Home.cs",
+              "RelativeDocumentMoniker": "Home.cs",
+              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Home.cs [Design]",
+              "RelativeToolTip": "Home.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T09:05:42.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
               "Title": "ManageType.cs [Design]",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\ManageType.cs",
               "RelativeDocumentMoniker": "ManageType.cs",
               "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\ManageType.cs [Design]",
               "RelativeToolTip": "ManageType.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T09:53:26.113Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-29T09:53:26.113Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 30,
               "Title": "packages.config",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\packages.config",
               "RelativeDocumentMoniker": "packages.config",
@@ -535,109 +608,77 @@
               "RelativeToolTip": "packages.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-11-02T04:04:52.444Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T04:04:52.444Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 31,
               "Title": "PaymentMethod.cs [Design]",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\PaymentMethod.cs",
               "RelativeDocumentMoniker": "PaymentMethod.cs",
               "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\PaymentMethod.cs [Design]",
               "RelativeToolTip": "PaymentMethod.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T16:26:23.931Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-31T16:26:23.931Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAMwBIAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:18:10.044Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 32,
               "Title": "Receipt.cs [Design]",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Receipt.cs",
               "RelativeDocumentMoniker": "Receipt.cs",
               "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Receipt.cs [Design]",
               "RelativeToolTip": "Receipt.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T03:29:18.308Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-01T03:29:18.308Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 33,
               "Title": "Report1.rdlc [Design]",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Report1.rdlc",
               "RelativeDocumentMoniker": "Report1.rdlc",
               "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Report1.rdlc [Design]",
               "RelativeToolTip": "Report1.rdlc [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
-              "WhenOpened": "2024-10-31T07:26:56.84Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-31T07:26:56.84Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 34,
               "Title": "Service.cs [Design]",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Service.cs",
               "RelativeDocumentMoniker": "Service.cs",
               "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Service.cs [Design]",
               "RelativeToolTip": "Service.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T04:52:08.261Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-29T04:52:08.261Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 35,
               "Title": "ServiceModule.cs [Design]",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\ServiceModule.cs",
               "RelativeDocumentMoniker": "ServiceModule.cs",
               "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\ServiceModule.cs [Design]",
               "RelativeToolTip": "ServiceModule.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T04:52:12.026Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-29T04:52:12.026Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 36,
               "Title": "Setting.cs [Design]",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Setting.cs",
               "RelativeDocumentMoniker": "Setting.cs",
               "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Setting.cs [Design]",
               "RelativeToolTip": "Setting.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T07:26:53.318Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-31T07:26:53.318Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "SettlePayment.cs [Design]",
-              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\SettlePayment.cs",
-              "RelativeDocumentMoniker": "SettlePayment.cs",
-              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\SettlePayment.cs [Design]",
-              "RelativeToolTip": "SettlePayment.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T03:31:00.005Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 37,
               "Title": "SettlePayment.cs",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\SettlePayment.cs",
               "RelativeDocumentMoniker": "SettlePayment.cs",
@@ -645,12 +686,11 @@
               "RelativeToolTip": "SettlePayment.cs",
               "ViewState": "AgIAAKcAAAAAAAAAAAAuwLUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T03:31:01.158Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-01T03:31:01.158Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 38,
               "Title": "Setting.cs",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Setting.cs",
               "RelativeDocumentMoniker": "Setting.cs",
@@ -658,12 +698,11 @@
               "RelativeToolTip": "Setting.cs",
               "ViewState": "AgIAAHoAAAAAAAAAAAAIwJkAAABwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T02:14:19.619Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T02:14:19.619Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 39,
               "Title": "Report.cs",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Report.cs",
               "RelativeDocumentMoniker": "Report.cs",
@@ -671,12 +710,11 @@
               "RelativeToolTip": "Report.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T02:16:48.003Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T02:16:48.003Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 40,
               "Title": "Setting.Designer.cs",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Setting.Designer.cs",
               "RelativeDocumentMoniker": "Setting.Designer.cs",
@@ -684,12 +722,11 @@
               "RelativeToolTip": "Setting.Designer.cs",
               "ViewState": "AgIAALcBAAAAAAAAAAAkwMcBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T02:14:35.266Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T02:14:35.266Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 41,
               "Title": "momo_icon_square_pinkbg_RGB.png - PNG [1234x1234, 32 bit, PNG]",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Resources\\momo_icon_square_pinkbg_RGB.png",
               "RelativeDocumentMoniker": "Resources\\momo_icon_square_pinkbg_RGB.png",
@@ -700,7 +737,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 42,
               "Title": "Report.Designer.cs",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Report.Designer.cs",
               "RelativeDocumentMoniker": "Report.Designer.cs",
@@ -708,12 +745,11 @@
               "RelativeToolTip": "Report.Designer.cs",
               "ViewState": "AgIAAKkBAAAAAAAAAAD4v7kBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T01:23:16.345Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T01:23:16.345Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 43,
               "Title": "CreateQRMoMo.cs",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CreateQRMoMo.cs",
               "RelativeDocumentMoniker": "CreateQRMoMo.cs",
@@ -721,12 +757,11 @@
               "RelativeToolTip": "CreateQRMoMo.cs",
               "ViewState": "AgIAAEEAAAAAAAAAAAAAwE8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T05:14:03.418Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-31T05:14:03.418Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 44,
               "Title": "Receipt.cs",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Receipt.cs",
               "RelativeDocumentMoniker": "Receipt.cs",
@@ -734,12 +769,11 @@
               "RelativeToolTip": "Receipt.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAIwDIAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T03:43:09.405Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-01T03:43:09.405Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 45,
               "Title": "CreateQRMoMo.Designer.cs",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CreateQRMoMo.Designer.cs",
               "RelativeDocumentMoniker": "CreateQRMoMo.Designer.cs",
@@ -747,12 +781,11 @@
               "RelativeToolTip": "CreateQRMoMo.Designer.cs",
               "ViewState": "AgIAAIgAAAAAAAAAAAAIwJsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T06:30:07.404Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-31T06:30:07.404Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 46,
               "Title": "DataSet1.cs",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\DataSet1.cs",
               "RelativeDocumentMoniker": "DataSet1.cs",
@@ -760,25 +793,11 @@
               "RelativeToolTip": "DataSet1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T15:50:19.331Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-30T15:50:19.331Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "CustomerModule.cs",
-              "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CustomerModule.cs",
-              "RelativeDocumentMoniker": "CustomerModule.cs",
-              "ToolTip": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CustomerModule.cs",
-              "RelativeToolTip": "CustomerModule.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAnwKcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T09:53:49.225Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 47,
               "Title": "Customer.Designer.cs",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Customer.Designer.cs",
               "RelativeDocumentMoniker": "Customer.Designer.cs",
@@ -786,12 +805,11 @@
               "RelativeToolTip": "Customer.Designer.cs",
               "ViewState": "AgIAAE8AAAAAAAAAAAAwwGAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T09:53:42.008Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T09:53:42.008Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 49,
               "Title": "Home.Designer.cs",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Home.Designer.cs",
               "RelativeDocumentMoniker": "Home.Designer.cs",
@@ -799,12 +817,11 @@
               "RelativeToolTip": "Home.Designer.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAewCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T09:33:27.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T09:33:27.721Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 48,
               "Title": "Service.cs",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Service.cs",
               "RelativeDocumentMoniker": "Service.cs",
@@ -812,12 +829,11 @@
               "RelativeToolTip": "Service.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAQwFQAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T04:52:09.546Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T04:52:09.546Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 50,
               "Title": "Home.cs",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\Home.cs",
               "RelativeDocumentMoniker": "Home.cs",
@@ -825,12 +841,11 @@
               "RelativeToolTip": "Home.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T09:25:03.47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T09:25:03.47Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 51,
               "Title": "CostManagement.cs",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CostManagement.cs",
               "RelativeDocumentMoniker": "CostManagement.cs",
@@ -838,12 +853,11 @@
               "RelativeToolTip": "CostManagement.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAewBUAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T06:03:43.594Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T06:03:43.594Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 52,
               "Title": "CustomerModule.Designer.cs",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CustomerModule.Designer.cs",
               "RelativeDocumentMoniker": "CustomerModule.Designer.cs",
@@ -856,7 +870,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 53,
               "Title": "CashService.cs",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CashService.cs",
               "RelativeDocumentMoniker": "CashService.cs",
@@ -864,12 +878,11 @@
               "RelativeToolTip": "CashService.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAewDoAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T05:23:04.606Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T05:23:04.606Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 54,
               "Title": "CashService.Designer.cs",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CashService.Designer.cs",
               "RelativeDocumentMoniker": "CashService.Designer.cs",
@@ -877,12 +890,11 @@
               "RelativeToolTip": "CashService.Designer.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAewLgAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T05:22:59.463Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T05:22:59.463Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 55,
               "Title": "CashCutomer.cs",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\CashCutomer.cs",
               "RelativeDocumentMoniker": "CashCutomer.cs",
@@ -890,12 +902,11 @@
               "RelativeToolTip": "CashCutomer.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAewDsAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T05:22:08.532Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T05:22:08.532Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 56,
               "Title": "ServiceModule.cs",
               "DocumentMoniker": "D:\\PROGRAMING\\C#\\Project1_Laundry\\ServiceModule.cs",
               "RelativeDocumentMoniker": "ServiceModule.cs",
@@ -903,8 +914,7 @@
               "RelativeToolTip": "ServiceModule.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAQwBkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T04:52:14.087Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T04:52:14.087Z"
             }
           ]
         }

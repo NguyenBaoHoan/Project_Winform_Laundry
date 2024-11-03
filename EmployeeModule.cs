@@ -13,30 +13,29 @@ using System.Drawing.Drawing2D;
 using Project1_Laundry.Models;
 using System.Xml.Linq;
 using TheArtOfDevHtmlRenderer.Adapters;
+using System.IO;
 
 namespace Project1_Laundry
 {
     public partial class EmployeeModule : Form
     {
-
-
         private readonly LaundryContextDB context;
         bool check = false;
         string title = "Laundry Shop";
         Employee employee;
+
         public EmployeeModule(Employee employeeForm)
         {
             InitializeComponent();
             context = new LaundryContextDB(); // Khởi tạo DbContext
             employee = employeeForm; // Tham chiếu đến form Employer
-            if (cbRole.Items.Count > 1)
-                cbRole.SelectedIndex = 1; // Default to Worker if index 1 exists
-            else
-                cbRole.SelectedIndex = -1; // Deselect if there are not enough items
+            cbRole.SelectedIndex = 0;// Mặc định chọn Worker
         }
-
-   
-
+        /// <summary>
+        /// tien anh
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
@@ -44,7 +43,7 @@ namespace Project1_Laundry
                 checkField(); // Kiểm tra dữ liệu
                 if (check)
                 {
-                    if (MessageBox.Show("Bạn có chắc chắn rặng bạn muốn đăng kí nhân viên này?",
+                    if (MessageBox.Show("Bạn có chắc chắn rằng bạn muốn đăng kí nhân viên này?",
                         "Employer Registration", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         var newEmployer = new tbEmployee
@@ -56,7 +55,9 @@ namespace Project1_Laundry
                             gender = rdMale.Checked ? "Nam" : "Nữ",
                             role = cbRole.Text,
                             salary = txtSalary.Text,
-                            password = txtPassword.Text
+                            password = txtPassword.Text,
+                            Image = ConvertImageToBytes(ptbEmployee.Image),// Lưu hình ảnh
+                            isAdmin = cbRole.SelectedItem.ToString() == "Quản Lý" // Gán isAdmin dựa trên vai trò
                         };
 
                         context.tbEmployees.Add(newEmployer); // Thêm vào DbSet
@@ -74,7 +75,11 @@ namespace Project1_Laundry
                 MessageBox.Show($"Error: {ex.Message}", title, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        /// <summary>
+        /// tien anh
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
@@ -82,7 +87,7 @@ namespace Project1_Laundry
                 checkField(); // Kiểm tra dữ liệu
                 if (check)
                 {
-                    if (MessageBox.Show("Bạn có chắn rằng muốn thay đổi dòng dự liệu này không?",
+                    if (MessageBox.Show("Bạn có chắc rằng muốn thay đổi dòng dữ liệu này không?",
                         "Employer Editing", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         if (int.TryParse(lblEid.Text, out int employerId))
@@ -98,6 +103,8 @@ namespace Project1_Laundry
                                 employer.role = cbRole.Text;
                                 employer.salary = txtSalary.Text;
                                 employer.password = txtPassword.Text;
+                                employer.Image = ConvertImageToBytes(ptbEmployee.Image); // Cập nhật hình ảnh
+                                employer.isAdmin = cbRole.SelectedIndex == 1; // Cập nhật isAdmin
 
                                 context.SaveChanges(); // Lưu thay đổi
 
@@ -135,8 +142,9 @@ namespace Project1_Laundry
             txtAddress.Clear();
             txtSalary.Clear();
             txtPassword.Clear();
-            dtDob.Value = DateTime.Now; 
-            cbRole.SelectedIndex = 0; 
+            dtDob.Value = DateTime.Now;
+            cbRole.SelectedIndex = 0;
+            ptbEmployee.Image = null; // Xóa hình ảnh hiển thị
         }
 
         public void checkField()
@@ -183,7 +191,35 @@ namespace Project1_Laundry
             this.Dispose();
         }
 
-       
+        /// <summary>
+        /// tien anh
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        
+
+        public byte[] ConvertImageToBytes(Image img)
+        {
+            if (img == null)
+                return null;
+
+            using (MemoryStream ms = new MemoryStream())
+            {
+                img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                return ms.ToArray();
+            }
+        }
+
+        private void btnSelectPicture_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                ptbEmployee.Image = new Bitmap(openFileDialog.FileName);
+            }
+        }
+
     }
 }
-

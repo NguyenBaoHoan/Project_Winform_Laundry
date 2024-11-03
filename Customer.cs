@@ -85,6 +85,8 @@ namespace Project1_Laundry
                             int id = int.Parse(dgvCustomer.Rows[e.RowIndex].Cells[1].Value.ToString());
                             var customer = context.tbCustomers.Find(id);
 
+                            if(customer.points > 0) { MessageBox.Show("Không thể xoá dính ràng buộc"); return; }
+
                             if (customer != null)
                             {
                                 context.tbCustomers.Remove(customer);  // Xóa khách hàng
