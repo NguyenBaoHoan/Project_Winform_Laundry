@@ -121,7 +121,7 @@ namespace Project1_Laundry
 
         #endregion
 
-        #region Vốn
+        #region Company
 
         public void LoadCompany()
         {

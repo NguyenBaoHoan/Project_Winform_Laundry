@@ -46,7 +46,7 @@ namespace Project1_Laundry
         }
 
 
-
+        
         public int GetTypeIdByName(string TypeName)
         {
             var Type = context.tbTypes.FirstOrDefault(t => t.name == TypeName);
@@ -85,7 +85,7 @@ namespace Project1_Laundry
                             int id = int.Parse(dgvCustomer.Rows[e.RowIndex].Cells[1].Value.ToString());
                             var customer = context.tbCustomers.Find(id);
 
-                            if(customer.points > 0) { MessageBox.Show("Không thể xoá dính ràng buộc"); return; }
+                            if(customer.points > 0) { MessageBox.Show("Không thể xoá vì ràng buộc dữ liệu"); return; }
 
                             if (customer != null)
                             {

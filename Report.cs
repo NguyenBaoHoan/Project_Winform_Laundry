@@ -11,10 +11,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Project1_Laundry.Models;
+using System.Data.SqlClient;
 namespace Project1_Laundry
 {
     public partial class Report : Form
     {
+
+
         private readonly LaundryContextDB context;
 
         public Report()
@@ -38,22 +41,22 @@ namespace Project1_Laundry
 
         private void loadTopService()
         {
-
             try
             {
-
                 var fromDate = dtFromTopSelling.Value.Date;
                 var toDate = dtToTopSelling.Value.Date;
 
+                CultureInfo vietnamCulture = new CultureInfo("vi-VN");
+
                 var topSelling = context.tbCashes
                     .Where(c => c.date >= fromDate && c.date <= toDate && c.status == "Sold")
-                    .GroupBy(c => new { c.tbService.name })
+                    .GroupBy(c => new { c.tbService.name }) // Tạo nhóm theo dịch vụ
                     .ToList()
                     .Select(g => new
                     {
-                        ServiceName = g.Key.name,
+                        ServiceName = g.Key.name, // Key là thuộc tính đã gom nhóm
                         Quantity = g.Count(),
-                        Total = g.Sum(c => decimal.Parse(c.price))
+                        Total = g.Sum(c => decimal.Parse(c.price) * 1000) // Nhân với 1000 cần thiết để xử lý số tiền VND
                     })
                     .OrderByDescending(g => g.Quantity)
                     .Take(10)
@@ -65,15 +68,13 @@ namespace Project1_Laundry
                 foreach (var item in topSelling)
                 {
                     i++;
-                    dgvTopSelling.Rows.Add(i, item.ServiceName, item.Quantity, item.Total);
+                    dgvTopSelling.Rows.Add(i, item.ServiceName, item.Quantity, item.Total.ToString("N0", vietnamCulture));
                 }
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
             }
-
         }
 
         #endregion topService
@@ -88,46 +89,46 @@ namespace Project1_Laundry
             loadRevenus();
         }
 
-         
         public void loadRevenus()
         {
             try
             {
-                using (var db = new LaundryContextDB())
-                {
-                    var fromDate = dtFromRevenud.Value.Date;
-                    var toDate = dtToRevenus.Value.Date;
+                var fromDate = dtFromRevenud.Value.Date;
+                var toDate = dtToRevenus.Value.Date;
 
-                    var revenus = db.tbCashes
-                        .Where(c => c.date >= fromDate && c.date <= toDate && c.status == "Sold")
-                        .GroupBy(c => c.date.Value)
-                        .ToList()
-                        .Select(g => new
-                        {
-                            Date = g.Key,
-                            Total = g.Sum(c => Convert.ToDouble(c.price))
-                        })
-                        .ToList();
-
-                    dgvRevenus.Rows.Clear();
-                    double total = 0;
-                    int i = 0;
-
-                    foreach (var item in revenus)
+                var revenus = context.tbCashes
+                    .Where(c => c.date >= fromDate && c.date <= toDate && c.status == "Sold")
+                    .GroupBy(c => c.date.Value)
+                    .ToList()
+                    .Select(g => new
                     {
-                        i++;
-                        dgvRevenus.Rows.Add(i, item.Date.ToShortDateString(), item.Total.ToString("#,##0,000"));
-                        total += item.Total;
-                    }
+                        Date = g.Key,
+                        Total = g.Sum(c => Convert.ToDouble(c.price) * 1000) // * 1000 thành việt VND
+                    })
+                    .ToList();
 
-                    lblRevenus.Text = total.ToString("#,##,000");
+                dgvRevenus.Rows.Clear();
+                double total = 0;
+                int i = 0;
+
+                CultureInfo vietnamCulture = new CultureInfo("vi-VN");
+
+                foreach (var item in revenus)
+                {
+                    i++;
+                    dgvRevenus.Rows.Add(i, item.Date.ToString("dd/MM/yyyy"), item.Total.ToString("N0", vietnamCulture));
+                    total += item.Total;
                 }
+
+                lblRevenus.Text = total.ToString("N0", vietnamCulture);
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
             }
         }
+
         #endregion Revenus
         #region LoadChiPhi
         private void dtFromChiPhi_ValueChanged(object sender, EventArgs e)
@@ -166,7 +167,7 @@ namespace Project1_Laundry
                 foreach (var item in costOfGoods)
                 {
                     i++;
-                    dgvCostofGood.Rows.Add(i, item.costname, item.Cost, item.date.Value.ToShortDateString());
+                    dgvCostofGood.Rows.Add(i, item.costname, item.Cost, item.date.Value.ToString("dd/MM/yyyy"));
 
                     // Loại bỏ dấu chấm hoặc dấu phẩy và chuyển đổi thành double
                     string cleanedCost = item.Cost.Replace(".", "").Replace(",", "");
@@ -188,9 +189,62 @@ namespace Project1_Laundry
             }
         }
 
-
         #endregion LoadChiPhi
 
-        
+
+
+        #region GrossProfit
+
+        private void dateTimePicker6_ValueChanged(object sender, EventArgs e)
+        {
+            LoadGrossProfit();
+        }
+
+        private void dateTimePicker5_ValueChanged(object sender, EventArgs e)
+        {
+            LoadGrossProfit();
+        }
+
+
+
+        public void LoadGrossProfit()
+        {
+
+            // Retrieve and parse Revenues data
+            var revenues = context.tbCashes
+                .Where(cash => cash.date >= dtFrom.Value && cash.date <= dtTo.Value)
+                .ToList()
+                .Select(cash =>
+                {
+                    double value;
+                    return double.TryParse(cash.price, out value) ? value : 0;
+                })
+                .Sum();
+
+            // Retrieve and parse Cost of Goods data
+            var costs = context.tbCostofGoods
+                .Where(cost => cost.date >= dtFrom.Value && cost.date <= dtTo.Value)
+                .ToList()
+                .Select(cost =>
+                {
+                    double value;
+                    return double.TryParse(cost.cost, out value) ? value : 0;
+                })
+                .Sum();
+
+            // Update Text Boxes
+            txtRevenus.Text = revenues.ToString("#,##0.00");
+            txtCoG.Text = costs.ToString("#,##0.00");
+
+            // Calculate and display Gross Profit
+            double grossProfit = revenues - costs;
+            txtProfit.Text = grossProfit.ToString("#,##0.00");
+
+            // Change color based on Gross Profit value
+            txtProfit.ForeColor = grossProfit < 0 ? Color.Red : Color.Green;
+
+        }
+
+        #endregion GrossProfit
     }
 }

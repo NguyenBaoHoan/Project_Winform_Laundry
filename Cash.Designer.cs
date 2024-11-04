@@ -65,9 +65,9 @@
             // 
             this.lblTransno.AutoSize = true;
             this.lblTransno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTransno.Location = new System.Drawing.Point(167, 23);
+            this.lblTransno.Location = new System.Drawing.Point(180, 23);
             this.lblTransno.Name = "lblTransno";
-            this.lblTransno.Size = new System.Drawing.Size(88, 18);
+            this.lblTransno.Size = new System.Drawing.Size(110, 24);
             this.lblTransno.TabIndex = 7;
             this.lblTransno.Text = "0000000000";
             // 
@@ -78,7 +78,7 @@
             this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(40, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 18);
+            this.label1.Size = new System.Drawing.Size(134, 23);
             this.label1.TabIndex = 6;
             this.label1.Text = "Số giao dịch :";
             // 
@@ -89,7 +89,7 @@
             this.label3.ForeColor = System.Drawing.Color.Blue;
             this.label3.Location = new System.Drawing.Point(443, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 18);
+            this.label3.Size = new System.Drawing.Size(101, 23);
             this.label3.TabIndex = 8;
             this.label3.Text = "Tổng Tiền :";
             // 
@@ -99,7 +99,7 @@
             this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.Location = new System.Drawing.Point(532, 24);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(49, 19);
+            this.lblTotal.Size = new System.Drawing.Size(60, 23);
             this.lblTotal.TabIndex = 9;
             this.lblTotal.Text = "0.000";
             // 
@@ -158,9 +158,9 @@
             this.btnAddCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCustomer.Image")));
             this.btnAddCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddCustomer.Location = new System.Drawing.Point(26, 13);
+            this.btnAddCustomer.Location = new System.Drawing.Point(25, 13);
             this.btnAddCustomer.Name = "btnAddCustomer";
-            this.btnAddCustomer.Size = new System.Drawing.Size(136, 50);
+            this.btnAddCustomer.Size = new System.Drawing.Size(165, 50);
             this.btnAddCustomer.TabIndex = 4;
             this.btnAddCustomer.Text = "Khách hàng";
             this.btnAddCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -177,7 +177,7 @@
             this.btnAddService.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddService.Location = new System.Drawing.Point(276, 13);
             this.btnAddService.Name = "btnAddService";
-            this.btnAddService.Size = new System.Drawing.Size(109, 50);
+            this.btnAddService.Size = new System.Drawing.Size(127, 50);
             this.btnAddService.TabIndex = 5;
             this.btnAddService.Text = "Dịch vụ";
             this.btnAddService.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -200,16 +200,18 @@
             this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Delete.HeaderText = "";
             this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
+            this.Delete.MinimumWidth = 6;
             this.Delete.Name = "Delete";
-            this.Delete.Width = 5;
+            this.Delete.Width = 6;
             // 
             // Column9
             // 
             this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column9.HeaderText = "Ngày";
+            this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
             this.Column9.Visible = false;
-            this.Column9.Width = 73;
+            this.Column9.Width = 90;
             // 
             // Column4
             // 
@@ -217,8 +219,9 @@
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.Column4.DefaultCellStyle = dataGridViewCellStyle1;
             this.Column4.HeaderText = "Giá";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
-            this.Column4.Width = 58;
+            this.Column4.Width = 70;
             // 
             // Column8
             // 
@@ -226,65 +229,74 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.Column8.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column8.HeaderText = "Dùng dịch vụ";
+            this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
             // 
             // Column7
             // 
             this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column7.HeaderText = "Xếp hạng";
+            this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
-            this.Column7.Width = 99;
+            this.Column7.Width = 122;
             // 
             // Column6
             // 
             this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column6.HeaderText = "Thông tin đồ";
+            this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
-            this.Column6.Width = 119;
+            this.Column6.Width = 148;
             // 
             // Column10
             // 
             this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column10.HeaderText = "Nhãn hiệu";
+            this.Column10.MinimumWidth = 6;
             this.Column10.Name = "Column10";
-            this.Column10.Width = 104;
+            this.Column10.Width = 129;
             // 
             // Column5
             // 
             this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column5.HeaderText = "Car No.";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.Visible = false;
-            this.Column5.Width = 90;
+            this.Column5.Width = 109;
             // 
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column3.HeaderText = "Khách hàng";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
-            this.Column3.Width = 121;
+            this.Column3.Width = 152;
             // 
             // Column11
             // 
             this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column11.HeaderText = "Số giao dịch";
+            this.Column11.MinimumWidth = 6;
             this.Column11.Name = "Column11";
-            this.Column11.Width = 121;
+            this.Column11.Width = 146;
             // 
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column2.HeaderText = "Mã";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.Visible = false;
-            this.Column2.Width = 59;
+            this.Column2.Width = 69;
             // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column1.HeaderText = "STT";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 49;
+            this.Column1.Width = 62;
             // 
             // dgvCash
             // 
@@ -322,6 +334,7 @@
             this.dgvCash.Location = new System.Drawing.Point(0, 71);
             this.dgvCash.Name = "dgvCash";
             this.dgvCash.RowHeadersVisible = false;
+            this.dgvCash.RowHeadersWidth = 51;
             this.dgvCash.Size = new System.Drawing.Size(951, 300);
             this.dgvCash.TabIndex = 35;
             // 

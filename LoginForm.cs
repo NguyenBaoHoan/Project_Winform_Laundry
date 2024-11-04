@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BCrypt.Net;
 namespace Project1_Laundry
 {
     public partial class LoginForm : Form
@@ -40,22 +41,19 @@ namespace Project1_Laundry
         {
             try
             {
-
-
-                // Tìm nhân viên với tên và mật khẩu được nhập
                 var employer = context.tbEmployees
-                    .FirstOrDefault(emp => emp.name == txtName.Text && emp.password == txtPassword.Text);
+                    .FirstOrDefault(emp => emp.name == txtName.Text);
 
-                if (employer != null)
+                // Kiểm tra nếu employer tồn tại và mật khẩu khớp
+                if (employer != null && BCrypt.Net.BCrypt.Verify(txtPassword.Text, employer.password))
                 {
                     MessageBox.Show("Chào mừng " + employer.name + " ", "Bạn đã đăng nhập thành công!",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Kiểm tra quyền admin từ cột isAdmin
                     bool isAdmin = employer.isAdmin.HasValue && employer.isAdmin.Value;
 
                     this.Hide();
-                    MainForm main = new MainForm(isAdmin);  // Truyền quyền admin vào MainForm
+                    MainForm main = new MainForm(isAdmin);
                     main.ShowDialog();
                 }
                 else
@@ -63,7 +61,6 @@ namespace Project1_Laundry
                     MessageBox.Show("Tài khoản hoặc mật khẩu của bạn sai!", "ERROR",
                                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-
             }
             catch (Exception ex)
             {

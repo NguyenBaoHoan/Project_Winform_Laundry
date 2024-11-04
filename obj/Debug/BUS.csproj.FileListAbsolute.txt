@@ -105,3 +105,13 @@ D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\zxing.dll
 D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\zxing.presentation.dll
 D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\zxing.xml
 D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\zxing.presentation.xml
+D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\BCrypt.Net-Next.dll
+D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\System.Buffers.dll
+D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\System.Memory.dll
+D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\System.Numerics.Vectors.dll
+D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\BCrypt.Net-Next.xml
+D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\System.Buffers.xml
+D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\System.Memory.xml
+D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\System.Numerics.Vectors.xml
+D:\PROGRAMING\C#\Project1_Laundry\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml

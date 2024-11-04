@@ -34,7 +34,7 @@ namespace Project1_Laundry.Models
         [StringLength(50)]
         public string salary { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
         public string password { get; set; }
 
         public bool? isAdmin { get; set; }

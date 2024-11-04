@@ -177,9 +177,6 @@ namespace Project1_Laundry
             txtCash.Text += btn1.Text;
         }
 
-        private void txtSale_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

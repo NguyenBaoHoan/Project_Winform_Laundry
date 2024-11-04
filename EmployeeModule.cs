@@ -14,6 +14,7 @@ using Project1_Laundry.Models;
 using System.Xml.Linq;
 using TheArtOfDevHtmlRenderer.Adapters;
 using System.IO;
+using BCrypt.Net;
 
 namespace Project1_Laundry
 {
@@ -55,7 +56,7 @@ namespace Project1_Laundry
                             gender = rdMale.Checked ? "Nam" : "Nữ",
                             role = cbRole.Text,
                             salary = txtSalary.Text,
-                            password = txtPassword.Text,
+                            password = BCrypt.Net.BCrypt.HashPassword(txtPassword.Text),
                             Image = ConvertImageToBytes(ptbEmployee.Image),// Lưu hình ảnh
                             isAdmin = cbRole.SelectedItem.ToString() == "Quản Lý" // Gán isAdmin dựa trên vai trò
                         };

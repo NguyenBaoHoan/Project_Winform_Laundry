@@ -54,7 +54,7 @@ namespace Project1_Laundry
 
         internal void loadGrossProfit()
         {
-            throw new NotImplementedException();
+            
         }
 
         // Khai báo biến Form đang hoạt động, khởi tạo bằng null
